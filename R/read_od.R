@@ -16,32 +16,20 @@ if(!city %in% metadata$city){
 # checar argumentos: se passar cidade + ano + parâmetro de hamonized inexistente
 # dá mensagem de erro
 
-
-# Crio um caminho de um arquivo temporário e salvo no objeto temp do R
-temp <- fs::file_temp()
+# TODO: compor o nome do arquivo que vamos baixar
 
 # Crio o nome do arquivo que quero fazer download
 filename_to_download <- "od_sao-paulo_1977_not-harmonized.csv.gz"
 
-# TODO: compor o nome do arquivo que vamos baixar
-
-# Crio efetivamnete a pasta temporária
-fs::dir_create(temp)
-
-# Crio o caminho + nome de arquivo
-temporary_filename <- paste0(temp, "/", filename_to_download)
-
-# Subindo o arquivo para um release do repo odbr, release especificado no parâmetro
-piggyback::pb_download(file = filename_to_download,
-                         repo = "hsvab/odbr",
-                         tag = "v0.0.1",
-                         dest = temp)
+# Chamo a função download passando filename_to_download como parâmetro e salvo o
+# retorno na variável temporary_filename
+temporary_filename <- download_piggyback(filename_to_download)
 
 # Subindo o arquivo para um release do repo odbr, release especificado no parâmetro
 od_file <- readr::read_csv2(temporary_filename)
 
-fs::dir_delete(temp)
+fs::file_delete(temporary_filename)
 
-od_file
+return(od_file)
 
 }
