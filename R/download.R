@@ -1,21 +1,21 @@
-#
+# The "download_piggyback" function requires as parameter the filename_to_download
 download_piggyback <- function(filename_to_download) {
 
-# Crio um caminho de um arquivo temporário e salvo no objeto temp do R
+# Defining a temporary file path and saving it in "temp"
 temp <- fs::file_temp()
 
-# Crio efetivamnete a pasta temporária
+# Creating the temporary folder effectively
 fs::dir_create(temp)
 
-# Crio o caminho + nome de arquivo
+# Creating path + filename and saving to "temporary_filename"
 temporary_filename <- paste0(temp, "/", filename_to_download)
 
-# Subindo o arquivo para um release do repo odbr, release especificado no parâmetro
+# Uploading the file to a release of the odbr repo - release specified in the parameter
 piggyback::pb_download(file = filename_to_download,
                        repo = "hsvab/odbr",
                        tag = "v0.0.1",
                        dest = temp)
-
+# The function returns the R object "temporary_filename"
 return(temporary_filename)
 
 }
