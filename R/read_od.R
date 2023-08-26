@@ -14,10 +14,12 @@ if(!city %in% metadata$city){
 # Argument check - if it is passed a valid city with a valid year, but with a
 # non-existent harmonized parameter, it gives an error message
 
+#################################################
+# TODO: compor o nome do arquivo que vamos baixar
+#################################################
+
 # Creating the filename to download
 filename_to_download <- "od_sao-paulo_1977_not-harmonized.csv.gz"
-
-# TODO: compor o nome do arquivo que vamos baixar
 
 # Calling the "download_piggyback" function with "filename_to_download" as
 # parameter and saving the function return in "temporary_filename"
