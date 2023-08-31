@@ -16,8 +16,6 @@ usethis::ui_stop("The specified city ({city}) is not available.
   }
 
 
-
-
 # Creating the filename to download
 lanaguage_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
 filename_to_download <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text, ".csv")
