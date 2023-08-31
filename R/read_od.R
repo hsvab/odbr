@@ -1,5 +1,9 @@
 # The "read_od" function requires as parameter city, year and whether you want
-# the harmonised database (over the years, for the same city) or not - the default is the raw base
+# the harmonized database (over the years, for the same city) or not - the default is the raw base
+
+# Functions that will be used
+source("R/utils.R")
+
 read_od <- function(city = "São Paulo", year = 1977, harmonize = FALSE) {
 
 # Argument check - if it is passed a non-existent city in odbr, it gives an error message
@@ -14,12 +18,8 @@ if(!city %in% metadata$city){
 # Argument check - if it is passed a valid city with a valid year, but with a
 # non-existent harmonized parameter, it gives an error message
 
-#################################################
-# TODO: compor o nome do arquivo que vamos baixar
-#################################################
-
 # Creating the filename to download
-filename_to_download <- "od_sao-paulo_1977_not-harmonized.csv.gz"
+filename_to_download <- paste0(compose_name(city, year, harmonize), ".csv.gz")
 
 # Calling the "download_piggyback" function with "filename_to_download" as
 # parameter and saving the function return in "temporary_filename"
