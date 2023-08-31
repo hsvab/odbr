@@ -21,3 +21,17 @@ usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt)
 
 od_sao_paulo_1977_not_harmonized_dictionary_en <- readr::read_csv2("data_raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv")
 usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en)
+
+# Maps in 1977
+
+# read the shape file
+od_sp_1977_map_zones <- sf::read_sf("data_raw/sao_paulo/1977/not_harmonized/shapes/Zonas1977_region.shp")
+
+# write a gpkg unique file
+od_sp_1977_map_zones  |>
+  sf::write_sf("data_raw/sao_paulo/1977/not_harmonized/od_sp_1977_map_zones.gpkg")
+
+# upload the file to piggyback
+piggyback::pb_upload(file = "data_raw/sao_paulo/1977/not_harmonized/od_sp_1977_map_zones.gpkg",
+                     repo = "hsvab/odbr",
+                     tag = "v0.0.1")
