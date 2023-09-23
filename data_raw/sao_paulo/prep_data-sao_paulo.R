@@ -3,7 +3,7 @@ year=1977
 city="São Paulo"
 harmonize = FALSE
 repository = "hsvab/odbr"
-tag = "v0.0.2"
+tag = "v0.0.3"
 
 devtools::load_all()
 
@@ -22,7 +22,9 @@ city_levels <- c("Zonas", "Municipios", "Distritos")
 for(level in city_levels){
 
   filename_map <- paste0(compose_file_path(city, year, harmonize),"/",level,year,"_region.shp")
-  file_to_upload <- paste0(compose_file_path(city, year, harmonize),"/",level,year,".gpkg")
+
+  file_to_upload <- paste0(compose_file_path(city, year, harmonize),"/",
+                           compose_name(city, year, harmonize, level),".gpkg")
 
   if(file.exists(filename_map) == TRUE){
 
