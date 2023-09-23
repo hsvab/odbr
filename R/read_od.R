@@ -1,10 +1,9 @@
 # The "read_od" function requires as parameter city, year and whether you want
 # the harmonized database (over the years, for the same city) or not - the default is the raw base
 
-# Functions that will be used
-source("R/utils.R")
-
-read_od <- function(city = "São Paulo", year = 1977, harmonize = FALSE) {
+read_od <- function(city = "São Paulo",
+                    year = 1977,
+                    harmonize = FALSE) {
 
 # Argument check - if it is passed a non-existent city in odbr, it gives an error message
 if(!city %in% metadata$city){
