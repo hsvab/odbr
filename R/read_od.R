@@ -14,9 +14,17 @@ if(!city %in% metadata$city){
 
 # Argument check - if it is passed a valid city but with a non-existent year in
 # odbr, it gives an error message
+if(!city %in% metadata$city){
+  usethis::ui_stop("The specified year ({year}) is not available.
+                   Check the metadata object for available years and cohorts.")
+}
 
 # Argument check - if it is passed a valid city with a valid year, but with a
 # non-existent harmonized parameter, it gives an error message
+if(!city %in% metadata$city){
+  usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
+                 Check the metadata object for available harmonizeed parameters and cohorts.")
+}
 
 # Creating the filename to download
 filename_to_download <- paste0(compose_name(city, year, harmonize), ".csv.gz")
