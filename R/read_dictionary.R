@@ -8,8 +8,8 @@ read_dictionary <- function(city = "São Paulo",
 
 # Argument check - if it is passed a non-existent city in odbr, it gives an error message
 if(!city %in% metadata$city){
-  usethis::ui_stop("The specified city ({city}) is not available.
-                 Check the metadata object for available cities and cohorts.")
+  usethis::ui_stop("The specified city ({city}) is not available.")
+                 #Check the metadata object for available cities and cohorts.")
 }
 
 # Argument check - if it is passed a valid city but with a non-existent year in
