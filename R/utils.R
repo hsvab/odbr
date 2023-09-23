@@ -12,14 +12,18 @@ compose_file_path <- function(city, year, harmonize){
 }
 
 # Function to compose the base name of data / dictionary / map files -----------
-compose_name <- function(city, year, harmonize){
+compose_name <- function(city, year, harmonize, level = "od"){
+
   city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
 
   harmonized_text <- "not_harmonized"
   if(harmonize == TRUE){
     harmonized_text <- "harmonized"
   }
-  name <- paste0("od_",city_text,"_", year,"_", harmonized_text)
+
+  level_text <- gsub(" ", "_", tolower(iconv(level, to = "ASCII//TRANSLIT")))
+
+  name <- paste0(level_text,"_",city_text,"_", year,"_", harmonized_text)
   return(name)
 }
 
