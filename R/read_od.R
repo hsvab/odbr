@@ -30,7 +30,7 @@ read_od <- function(city = "São Paulo", year = 1977, harmonize = FALSE) {
   temporary_filename <- download_piggyback(filename_to_download)
 
   # Uploading the file to a release in odbr repository
-  od_file <- readr::read_csv2(temporary_filename)
+  od_file <- readr::read_csv2(temporary_filename, show_col_types = FALSE)
 
   # Deleting the "temporary_filename" variable
   fs::file_delete(temporary_filename)
