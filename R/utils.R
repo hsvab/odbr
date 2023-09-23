@@ -1,4 +1,17 @@
-# Function to compose the base name of data / dictionary files
+# Function to compose the base name of map files -------------------------------
+compose_file_path <- function(city, year, harmonize){
+  city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
+
+  harmonized_text <- "not_harmonized"
+  if(harmonize == TRUE){
+    harmonized_text <- "harmonized"
+  }
+  filepath <- paste0("data_raw/", city_text, "/", year, "/", harmonized_text)
+
+  return(filepath)
+}
+
+# Function to compose the base name of data / dictionary / map files -----------
 compose_name <- function(city, year, harmonize){
   city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
 
@@ -8,4 +21,28 @@ compose_name <- function(city, year, harmonize){
   }
   name <- paste0("od_",city_text,"_", year,"_", harmonized_text)
   return(name)
+}
+
+# Function to convert sav to csv.gz file, and upload to repository -------------
+upload_sav_db_to_repo <- function(city, year, harmonize){
+
+  base_filename <- paste0(compose_file_path(city, year, harmonize),"/",
+                     compose_name(city, year, harmonize))
+
+  # Creating the filename to download
+  filename_to_download <- paste0(base_filename,".sav")
+
+  # Reading raw data
+  od <- haven::read_sav(filename_to_download)
+
+  # Creating compacted filename
+  compacted_filename <- paste0(base_filename,".csv.gz")
+
+  # Compacting the file (.gz)
+  readr::write_csv2(od, compacted_filename)
+
+  # Uploading a file to a specific release from odbr repo (see parameter)
+  piggyback::pb_upload(file = compacted_filename,
+                       repo = repository,
+                       tag = tag )
 }
