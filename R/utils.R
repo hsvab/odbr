@@ -1,8 +1,8 @@
 # Function to compose the base name of data / dictionary files
 compose_name <- function(city, year, harmonize){
-  city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
+  city_text <- gsub("~", "", gsub(" ", "-", tolower(iconv(city, to = "ASCII//TRANSLIT"))))
 
-  harmonized_text <- "not_harmonized"
+  harmonized_text <- "not-harmonized"
   if(harmonize == TRUE){
     harmonized_text <- "harmonized"
   }
