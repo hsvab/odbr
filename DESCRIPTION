@@ -1,9 +1,12 @@
 Package: odbr
-Title: What the Package Does (One Line, Title Case)
+Title: Download Data from Brazil's Origin Destination Surveys 
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Authors@R: c(
+    person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
+    person("Diego", "Rabatone Oliveira", , "diraol@diraol.eng.br", role = "ctb"),
+    person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-3064-4486"))
+  )
 Description: What the package does (one paragraph).
 License: GPL (>= 3)
 Encoding: UTF-8
