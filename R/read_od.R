@@ -26,7 +26,6 @@
 read_od <- function(city = "São Paulo",
                     year = 1977,
                     harmonize = FALSE) {
-
   # Argument check - error message if it is passed a non-existent city parameter
   if (!city %in% metadata$city) {
     usethis::ui_stop("The specified city ({city}) is not available.
