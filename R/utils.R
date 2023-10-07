@@ -6,7 +6,7 @@ compose_file_path <- function(city, year, harmonize) {
   if (harmonize == TRUE) {
     harmonized_text <- "harmonized"
   }
-  filepath <- paste0("data_raw/", city_text, "/", year, "/", harmonized_text)
+  filepath <- paste0("data-raw/", city_text, "/", year, "/", harmonized_text)
 
   return(filepath)
 }

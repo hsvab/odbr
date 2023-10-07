@@ -1,6 +1,6 @@
 test_that("compose_file_path",{
   expect_equal(compose_file_path ("São Paulo", 1977, FALSE),
-               "data_raw/sao_paulo/1977/not_harmonized")
+               "data-raw/sao_paulo/1977/not_harmonized")
 })
 
 test_that("compose_name", {

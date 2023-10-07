@@ -16,6 +16,10 @@ read_od(city = "São Paulo", year = 1977, harmonize = FALSE)
 data. If \code{TRUE}, the function returns harmonized data to the same
 city, across all the years.}
 }
+\value{
+A \code{"data.frame"} object.
+}
 \description{
 The "read_od" function requires as parameter city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
 }
+\concept{Microdata}
