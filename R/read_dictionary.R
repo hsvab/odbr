@@ -19,13 +19,13 @@
 #' library(odbr)
 #'
 #' # return data origin destination database as data.frame
-#' df <- read_od(
-#'   city = "São Paulo",
+#' df <- read_dictionary(
+#'   city = "S\u00E3o Paulo",
 #'   year = 1977,
 #'   harmonize = FALSE
 #' )
 #'
-read_dictionary <- function(city = "São Paulo",
+read_dictionary <- function(city = "S\u00E3o Paulo",
                             year = 1977,
                             harmonize = FALSE,
                             language = "pt") {
