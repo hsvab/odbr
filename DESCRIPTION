@@ -1,13 +1,13 @@
 Package: odbr
 Title: Download Data from Brazil's Origin Destination Surveys 
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: c(
     person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
     person("Diego", "Rabatone Oliveira", , "diraol@diraol.eng.br", role = "ctb"),
     person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0002-3064-4486"))
   )
-Description: What the package does (one paragraph).
+Description: Download Data from Brazil's Origin Destination Surveys. Until now, this package provides the raw information from the São Paulo OD surveys, for all the years available.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -16,9 +16,9 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Imports: 
+    data.table,
     fs,
     piggyback,
-    readr,
     sf,
     usethis
 Suggests: 
