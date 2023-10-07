@@ -20,8 +20,7 @@ test_that("read_od",{
                   error = TRUE)
 })
 
-#TODO: How to validate if the database was properly uploaded?
-# test_that("read_od",{
-#   expect_equal(read_od(city = "São Paulo", year = 1977,harmonize = FALSE),
-#                ?????)
-# }
+test_that("read_od",{
+  testing_object = read_od(city = "São Paulo", year = 1997,harmonize = FALSE)
+  expect_equal(is.data.frame(testing_object), TRUE)
+})
