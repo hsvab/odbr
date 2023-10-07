@@ -58,6 +58,11 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                Check the metadata object for available language parameters and cohorts.")
   }
   # Creating the filename to download
-  lanaguage_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
-  filename_to_download <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text, ".csv")
+  language_text <- clean_string(language)
+
+  object_to_use <- paste0(compose_name(city_clean, year, harmonize), "_dictionary_", language_text)
+
+  # get object
+  get(object_to_use)
+
 }
