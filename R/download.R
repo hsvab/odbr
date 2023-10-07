@@ -14,7 +14,6 @@ download_piggyback <- function(filename_to_download) {
   piggyback::pb_download(
     file = filename_to_download,
     repo = "hsvab/odbr",
-    tag = "v0.0.1",
     dest = temp
   )
   # The function returns the R object "temporary_filename"
