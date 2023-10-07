@@ -16,7 +16,7 @@
 #' @examples
 #' library(odbr)
 #'
-#' # return data origin destination database as data.frame
+#' # return data from OD Surveys database as data.frame
 #' df <- read_od(
 #'  city = "S\u00E3o Paulo",
 #'  year = 1977,
@@ -30,21 +30,19 @@ read_od <- function(city = "S\u00E3o Paulo",
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
-  # Argument check - if it is passed a non-existent city in odbr, it gives an error message
+  # Argument check - error message if it is passed a non-existent city parameter
   if (!city_clean %in% clean_string(metadata$city)) {
     usethis::ui_stop("The specified city ({city}) is not available.
                    Check the metadata object for available cities and cohorts.")
   }
 
-  # Argument check - if it is passed a valid city but with a non-existent year in
-  # odbr, it gives an error message
+  # Argument check - error message if it is passed a non-existent year parameter
   if (!year %in% metadata$year) {
     usethis::ui_stop("The specified year ({year}) is not available.
                    Check the metadata object for available years and cohorts.")
   }
 
-  # Argument check - if it is passed a valid city with a valid year, but with a
-  # non-existent harmonized parameter, it gives an error message
+  # Argument check - error message if it is passed a non-existent harmonized parameter
   if (!harmonize %in% metadata$harmonized) {
     usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
                  Check the metadata object for available harmonized parameters and cohorts.")

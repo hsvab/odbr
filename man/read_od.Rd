@@ -20,6 +20,19 @@ city, across all the years.}
 A \code{"data.frame"} object.
 }
 \description{
-The "read_od" function requires as parameter city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
+The "read_od" function requires as parameter city, year and whether you want
+the harmonized database (over the years, for the same city) or not - the
+default is the raw base.
+}
+\examples{
+library(odbr)
+
+# return data from OD Surveys database as data.frame
+df <- read_od(
+  city = "São Paulo",
+  year = 1977,
+  harmonize = FALSE
+)
+
 }
 \concept{Microdata}
