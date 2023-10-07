@@ -34,9 +34,6 @@ read_od <- function(city = "São Paulo",
   # Uploading the file to a release in odbr repository
   od_file <- readr::read_csv2(temporary_filename)
 
-  # Deleting the "temporary_filename" variable
-  fs::file_delete(temporary_filename)
-
   # Delivering the requested file as a function return
   return(od_file)
 }
