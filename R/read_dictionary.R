@@ -30,10 +30,14 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                             year = 2017,
                             harmonize = FALSE,
                             language = "pt") {
+
+  # Clean the name of the city before comparing to the metadata
+  city_clean <- clean_string(city)
+
   # Argument check - error message if it is passed a non-existent city parameter
-  if (!city %in% metadata$city) {
-    usethis::ui_stop("The specified city ({city}) is not available.")
-    # Check the metadata object for available cities and cohorts.")
+  if (!city_clean %in% clean_string(metadata$city)) {
+    usethis::ui_stop("The specified city ({city}) is not available.
+                     Check the metadata object for available cities and cohorts.")
   }
 
   # Argument check - error message if it is passed a non-existent year parameter
@@ -55,7 +59,7 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   }
 
   # Creating the dictionary filename
-  language_text <- gsub(" ", "_", tolower(iconv(language, to = "ASCII//TRANSLIT")))
+  language_text <- clean_string(language)
   od_dic_name <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text)
 
   # Get the correct dictionary
