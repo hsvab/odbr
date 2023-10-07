@@ -54,11 +54,9 @@ for (level in city_levels) {
 od_sao_paulo_1977_not_harmonized_dictionary_pt <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_pt.csv",
   sep = ";"
 )
-usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt)
-
-data.table::fread()
+usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt, overwrite = TRUE)
 
 od_sao_paulo_1977_not_harmonized_dictionary_en <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv",
   sep = ";"
 )
-usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en)
+usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en, overwrite = TRUE)
