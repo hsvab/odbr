@@ -18,16 +18,20 @@
 #'
 #' # return data from OD Surveys database as data.frame
 #' df <- read_od(
-#'   city = "São Paulo",
-#'   year = 1977,
-#'   harmonize = FALSE
-#' )
+#'  city = "S\u00E3o Paulo",
+#'  year = 1977,
+#'  harmonize = FALSE
+#')
 #'
-read_od <- function(city = "São Paulo",
+read_od <- function(city = "S\u00E3o Paulo",
                     year = 1977,
                     harmonize = FALSE) {
+
+  # Clean the name of the city before comparing to the metadata
+  city_clean <- clean_string(city)
+
   # Argument check - error message if it is passed a non-existent city parameter
-  if (!city %in% metadata$city) {
+  if (!city_clean %in% clean_string(metadata$city)) {
     usethis::ui_stop("The specified city ({city}) is not available.
                    Check the metadata object for available cities and cohorts.")
   }

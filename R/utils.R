@@ -1,6 +1,6 @@
 # Function to compose the base name of map files -------------------------------
 compose_file_path <- function(city, year, harmonize) {
-  city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
+  city_text <- clean_string(city)
 
   harmonized_text <- "not_harmonized"
   if (harmonize == TRUE) {
@@ -13,14 +13,14 @@ compose_file_path <- function(city, year, harmonize) {
 
 # Function to compose the base name of data / dictionary / map files -----------
 compose_name <- function(city, year, harmonize, level = "od") {
-  city_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
+  city_text <- clean_string(city)
 
   harmonized_text <- "not_harmonized"
   if (harmonize == TRUE) {
     harmonized_text <- "harmonized"
   }
 
-  level_text <- gsub(" ", "_", tolower(iconv(level, to = "ASCII//TRANSLIT")))
+  level_text <- clean_string(level)
 
   name <- paste0(level_text, "_", city_text, "_", year, "_", harmonized_text)
   return(name)
@@ -54,4 +54,8 @@ upload_sav_db_to_repo <- function(city, year, harmonize) {
     repo = repository,
     tag = tag
   )
+}
+
+clean_string <- function(text) {
+  gsub("~", "", gsub(" ", "_", tolower(iconv(text, to = "ASCII//TRANSLIT"))))
 }

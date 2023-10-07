@@ -19,14 +19,14 @@
 #' library(odbr)
 #'
 #' # return data dictionary from OD Surveys, as data.frame, at a given city and year
-#' df <- read_od(
-#'   city = "São Paulo",
+#' df <- read_dictionary(
+#'   city = "S\u00E3o Paulo",
 #'   year = 1977,
 #'   harmonize = FALSE,
 #'   language = "pt"
 #' )
 #'
-read_dictionary <- function(city = "São Paulo",
+read_dictionary <- function(city = "S\u00E3o Paulo",
                             year = 1977,
                             harmonize = FALSE,
                             language = "pt") {
