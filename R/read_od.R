@@ -1,7 +1,9 @@
 #' Download microdata from OD Surveys databases
 #'
 #' @description
-#' The "read_od" function requires as parameter city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
+#' The "read_od" function requires as parameter city, year and whether you want
+#' the harmonized database (over the years, for the same city) or not - the
+#' default is the raw base.
 #'
 #' @template city
 #' @template year
@@ -12,8 +14,14 @@
 #' @family Microdata
 #'
 #' @examples
+#' library(odbr)
 #'
-#'
+#' # return data origin destination database as data.frame
+#' df <- read_od(
+#'   city = "São Paulo",
+#'   year = 1977,
+#'   harmonize = FALSE
+#' )
 #'
 read_od <- function(city = "São Paulo",
                     year = 1977,
@@ -47,7 +55,8 @@ read_od <- function(city = "São Paulo",
 
   # Uploading the file to a release in odbr repository
   od_file <- data.table::fread(temporary_filename,
-                               sep = ";")
+    sep = ";"
+  )
 
   # Delivering the requested file as a function return
   return(od_file)
