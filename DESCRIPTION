@@ -8,7 +8,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-3064-4486"))
   )
 Description: Download Data from Brazil's Origin Destination Surveys. Until now, this package provides the raw information from the São Paulo OD surveys, for all the years available.
-License: GPL (>= 3)
+License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.2
@@ -18,7 +18,9 @@ LazyData: true
 Imports: 
     data.table,
     fs,
+    haven,
     piggyback,
+    R.utils,
     sf,
     usethis
 Suggests: 
