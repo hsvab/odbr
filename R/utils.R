@@ -44,8 +44,9 @@ upload_sav_db_to_repo <- function(city, year, harmonize) {
 
   # Compacting the file (.gz)
   data.table::fwrite(od,
-                     file = compacted_filename,
-                     sep = ";")
+    file = compacted_filename,
+    sep = ";"
+  )
 
   # Uploading a file to a specific release from odbr repo (see parameter)
   piggyback::pb_upload(

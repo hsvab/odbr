@@ -24,7 +24,8 @@ city_levels <- c("Zonas", "Municipios", "Distritos")
 
 for (level in city_levels) {
   filename_map <- paste0(
-    compose_file_path(city, year, harmonize), "/", level, year, "_region.shp")
+    compose_file_path(city, year, harmonize), "/", level, year, "_region.shp"
+  )
 
   file_to_upload <- paste0(
     compose_file_path(city, year, harmonize), "/",
@@ -51,11 +52,13 @@ for (level in city_levels) {
 
 # Making the data dictionary available in the package
 od_sao_paulo_1977_not_harmonized_dictionary_pt <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_pt.csv",
-                                                                    sep = ";")
+  sep = ";"
+)
 usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt)
 
 data.table::fread()
 
 od_sao_paulo_1977_not_harmonized_dictionary_en <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv",
-                                                                    sep = ";")
+  sep = ";"
+)
 usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en)

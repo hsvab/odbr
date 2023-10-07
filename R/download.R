@@ -1,6 +1,5 @@
 # The "download_piggyback" function requires as parameter the filename_to_download
 download_piggyback <- function(filename_to_download) {
-
   # Defining a temporary file path and saving it in "temp"
   temp <- fs::file_temp()
 
