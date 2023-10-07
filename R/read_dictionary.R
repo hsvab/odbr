@@ -27,7 +27,7 @@
 #' )
 #'
 read_dictionary <- function(city = "S\u00E3o Paulo",
-                            year = 1977,
+                            year = 2017,
                             harmonize = FALSE,
                             language = "pt") {
   # Argument check - error message if it is passed a non-existent city parameter
@@ -53,7 +53,21 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
     usethis::ui_stop("The specified language parameter ({language}) is not available.
                Check the metadata object for available language parameters and cohorts.")
   }
-  # Creating the filename to download
-  lanaguage_text <- gsub(" ", "_", tolower(iconv(city, to = "ASCII//TRANSLIT")))
-  filename_to_download <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text, ".csv")
+
+  # Creating the dictionary filename
+  language_text <- gsub(" ", "_", tolower(iconv(language, to = "ASCII//TRANSLIT")))
+  od_dic_name <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text)
+
+  # Get the correct dictionary
+  od_dic <- get0(od_dic_name, envir = asNamespace("odbr"))
+
+  # Verify is loaded as a data.frame object
+  if (is.data.frame(od_dic) == FALSE) {
+    usethis::ui_stop("The specified dictionary is not available.
+                 Check the metadata object for available dictionaries and cohorts.")
+  }
+
+  # Delivering the requested file as a function return
+  return(od_dic)
+
 }
