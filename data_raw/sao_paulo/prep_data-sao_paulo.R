@@ -49,8 +49,12 @@ for (level in city_levels) {
 # Dictionaries -----------------------------------------------------------------
 
 # Making the data dictionary available in the package
-od_sao_paulo_1977_not_harmonized_dictionary_pt <- readr::read_csv2("data_raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_pt.csv")
+od_sao_paulo_1977_not_harmonized_dictionary_pt <- data.table::fread("data_raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_pt.csv",
+                                                                    sep = ";")
 usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt)
 
-od_sao_paulo_1977_not_harmonized_dictionary_en <- readr::read_csv2("data_raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv")
+data.table::fread()
+
+od_sao_paulo_1977_not_harmonized_dictionary_en <- data.table::fread("data_raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv",
+                                                                    sep = ";")
 usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en)
