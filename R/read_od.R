@@ -12,14 +12,14 @@ read_od <- function(city = "São Paulo",
 
   # Argument check - if it is passed a valid city but with a non-existent year in
   # odbr, it gives an error message
-  if (!city %in% metadata$city) {
+  if (!city %in% metadata$year) {
     usethis::ui_stop("The specified year ({year}) is not available.
                    Check the metadata object for available years and cohorts.")
   }
 
   # Argument check - if it is passed a valid city with a valid year, but with a
   # non-existent harmonized parameter, it gives an error message
-  if (!city %in% metadata$city) {
+  if (!city %in% metadata$harmonize) {
     usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
                  Check the metadata object for available harmonizeed parameters and cohorts.")
   }
