@@ -29,9 +29,9 @@ library(odbr)
 
 # return data from OD Surveys database as data.frame
 df <- read_od(
-  city = "São Paulo",
-  year = 1977,
-  harmonize = FALSE
+ city = "S\u00E3o Paulo",
+ year = 1977,
+ harmonize = FALSE
 )
 
 }
