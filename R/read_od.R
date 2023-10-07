@@ -1,6 +1,20 @@
-# The "read_od" function requires as parameter city, year and whether you want
-# the harmonized database (over the years, for the same city) or not - the default is the raw base
-
+#' Download microdata from OD Surveys databases
+#'
+#' @description
+#' The "read_od" function requires as parameter city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
+#'
+#' @template city
+#' @template year
+#' @template harmonize
+#'
+#' @return A `"data.frame"` object.
+#' @export
+#' @family Microdata
+#'
+#' @examples
+#'
+#'
+#'
 read_od <- function(city = "São Paulo",
                     year = 1977,
                     harmonize = FALSE) {
@@ -12,16 +26,16 @@ read_od <- function(city = "São Paulo",
 
   # Argument check - if it is passed a valid city but with a non-existent year in
   # odbr, it gives an error message
-  if (!city %in% metadata$year) {
+  if (!year %in% metadata$year) {
     usethis::ui_stop("The specified year ({year}) is not available.
                    Check the metadata object for available years and cohorts.")
   }
 
   # Argument check - if it is passed a valid city with a valid year, but with a
   # non-existent harmonized parameter, it gives an error message
-  if (!city %in% metadata$harmonize) {
+  if (!harmonize %in% metadata$harmonized) {
     usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
-                 Check the metadata object for available harmonizeed parameters and cohorts.")
+                 Check the metadata object for available harmonized parameters and cohorts.")
   }
 
   # Creating the filename to download
