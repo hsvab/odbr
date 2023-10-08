@@ -1,3 +1,27 @@
+#' Download microdata from OD Surveys databases
+#'
+#' @description
+#' The "read_od" function requires as parameter city, year and whether you want
+#' the harmonized database (over the years, for the same city) or not - the
+#' default is the raw base.
+#'
+#' @template city
+#' @template year
+#' @template harmonize
+#'
+#' @return A `"data.frame"` object.
+#' @family Microdata
+#'
+#' @examples
+#' library(odbr)
+#'
+#' # return data from OD Surveys database as data.frame
+#' df <- read_od(
+#'  city = "S\u00E3o Paulo",
+#'  year = 1977,
+#'  harmonize = FALSE
+#')
+#'
 # Setup ------------------------------------------------------------------------
 year <- 2007
 city <- "São Paulo"
@@ -14,12 +38,9 @@ piggyback::pb_new_release(
 )
 
 # Database ---------------------------------------------------------------------
-
 upload_sav_db_to_repo(city, year, harmonize)
 
 # Maps -------------------------------------------------------------------------
-
-
 city_levels <- c("Zonas", "Municipios", "Distritos")
 
 for (level in city_levels) {
@@ -45,20 +66,43 @@ for (level in city_levels) {
       repo = repository,
       tag = tag
     )
+    rm("od_map")
   }
 }
+rm(list=c("level", "city_levels", "filename_map", "file_to_upload"))
 
 # Dictionaries -----------------------------------------------------------------
 
 # Making the data dictionary available in the package
-od_sao_paulo_1977_not_harmonized_dictionary_pt <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_pt.csv",
-  sep = ";"
-)
-usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_pt)
+years <- c("1977", "1987", "1997", "2007", "2017")
+languages <- c("en", "es", "pt")
 
-data.table::fread()
+for (year in years) {
+  for(language in languages){
 
-od_sao_paulo_1977_not_harmonized_dictionary_en <- data.table::fread("data-raw/sao_paulo/dic/od_sao_paulo_1977_not_harmonized_dictionary_en.csv",
-  sep = ";"
-)
-usethis::use_data(od_sao_paulo_1977_not_harmonized_dictionary_en)
+    # Name of the dictionary variable that will be available in the package
+    dic_name <- paste0(
+      compose_name(city, year, harmonize),
+      "_dictionary_",
+      language
+    )
+
+    # path of the csv file with dictionary content to be read
+    filename_dic <- paste0("data-raw/sao_paulo/dic/", dic_name, ".csv")
+
+    data <- data.table::fread(filename_dic, sep=";")
+
+    # Create a local df variable named as the content of "dic_name" with the
+    # data content
+    assign(dic_name, data)
+
+    # Call use_data with the first argument having the variable which has the
+    # same name as the content of the variable "dic_name"
+    do.call(usethis::use_data, list(as.name(dic_name), overwrite=TRUE))
+
+    # Cleanup
+    rm(list=c(dic_name, "dic_name", "filename_dic", "data"))
+  }
+}
+# Cleanup
+rm(list=c("years", "languages", "year", "language"))
