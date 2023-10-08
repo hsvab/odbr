@@ -30,7 +30,6 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                             year = 2017,
                             harmonize = FALSE,
                             language = "pt") {
-
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
@@ -73,5 +72,4 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
 
   # Delivering the requested file as a function return
   return(od_dic)
-
 }

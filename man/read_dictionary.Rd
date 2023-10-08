@@ -6,7 +6,7 @@
 \usage{
 read_dictionary(
   city = "São Paulo",
-  year = 1977,
+  year = 2017,
   harmonize = FALSE,
   language = "pt"
 )

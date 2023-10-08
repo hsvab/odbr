@@ -18,15 +18,14 @@
 #'
 #' # return data from OD Surveys database as data.frame
 #' df <- read_od(
-#'  city = "S\u00E3o Paulo",
-#'  year = 2017,
-#'  harmonize = FALSE
-#')
+#'   city = "S\u00E3o Paulo",
+#'   year = 2017,
+#'   harmonize = FALSE
+#' )
 #'
 read_od <- function(city = "S\u00E3o Paulo",
                     year = 2017,
                     harmonize = FALSE) {
-
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
