@@ -56,6 +56,7 @@ upload_sav_db_to_repo <- function(city, year, harmonize) {
   )
 }
 
+# Function to remove non-ASCII characters -------------------------------------
 clean_string <- function(text) {
   gsub("~", "", gsub(" ", "_", tolower(iconv(text, to = "ASCII//TRANSLIT"))))
 }
