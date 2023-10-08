@@ -55,7 +55,7 @@ read_od <- function(city = "S\u00E3o Paulo",
   # parameter and saving the function return in "temporary_filename"
   temporary_filename <- download_piggyback(filename_to_download)
 
-  # Uploading the file to a release in odbr repository
+  # Reading the file to a release in odbr repository
   od_file <- data.table::fread(temporary_filename,
     sep = ";"
   )
