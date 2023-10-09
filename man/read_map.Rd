@@ -4,7 +4,7 @@
 \alias{read_map}
 \title{Download spatial data from OD Surveys databases}
 \usage{
-read_map(city = "São Paulo", year = 1977, harmonize = FALSE, geometry = "zone")
+read_map(city = "São Paulo", year = 2017, harmonize = FALSE, geometry = "zone")
 }
 \arguments{
 \item{city}{Character. City of reference. Defaults to "São Paulo".}
@@ -33,24 +33,24 @@ library(odbr)
 
 # return zone data from OD Surveys database as data.frame at a given city and year
 df <- read_map(
-  city = "São Paulo",
-  year = 1977,
+  city = "S\u00E3o Paulo",
+  year = 2017,
   harmonize = FALSE,
   geometry = "zone"
 )
 
 #' # return district data from OD Surveys database as data.frame at a given city and year
 df <- read_map(
-  city = "São Paulo",
-  year = 1977,
+  city = "S\u00E3o Paulo",
+  year = 2017,
   harmonize = FALSE,
   geometry = "district"
 )
 
 # return municipality data from OD Surveys database as data.frame at a given city and year
 df <- read_map(
-  city = "São Paulo",
-  year = 1977,
+  city = "S\u00E3o Paulo",
+  year = 2017,
   harmonize = FALSE,
   geometry = "municipality"
 )
