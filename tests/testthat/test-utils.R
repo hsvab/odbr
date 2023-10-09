@@ -12,9 +12,13 @@ test_that("compose_name", {
   )
 })
 
-# TODO: Test upload_sav_db_to_repo function
+# Testing data file loading with read_od
+test_that("read_od", {
+  testing_object <- read_od(city = "São Paulo", year = 1997, harmonize = FALSE)
+  expect_equal(is.data.frame(testing_object), TRUE)
+})
 
-# Testing error message
+# Testing read_od error message
 test_that("read_od", {
   expect_snapshot(read_od(city = "Manaus", year = 1977, harmonize = FALSE),
     error = TRUE
@@ -27,7 +31,7 @@ test_that("read_od", {
   )
 })
 
-test_that("read_od", {
-  testing_object <- read_od(city = "São Paulo", year = 1997, harmonize = FALSE)
-  expect_equal(is.data.frame(testing_object), TRUE)
-})
+
+# TODO: Test upload_sav_db_to_repo function
+
+
