@@ -16,7 +16,13 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/dictSP.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/metadata.html</loc>
   </url>
   <url>
     <loc>/reference/read_dictionary.html</loc>
