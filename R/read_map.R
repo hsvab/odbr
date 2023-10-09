@@ -21,7 +21,7 @@
 #'
 #' # return zone data from OD Surveys database as data.frame at a given city and year
 #' df <- read_map(
-#'   city = "S\u00E3o Paulo",
+#'   city = "Sao Paulo",
 #'   year = 2017,
 #'   harmonize = FALSE,
 #'   geometry = "zone"
@@ -29,7 +29,7 @@
 #'
 #' #' # return district data from OD Surveys database as data.frame at a given city and year
 #' df <- read_map(
-#'   city = "S\u00E3o Paulo",
+#'   city = "Sao Paulo",
 #'   year = 2017,
 #'   harmonize = FALSE,
 #'   geometry = "district"
@@ -37,7 +37,7 @@
 #'
 #' # return municipality data from OD Surveys database as data.frame at a given city and year
 #' df <- read_map(
-#'   city = "S\u00E3o Paulo",
+#'   city = "Sao Paulo",
 #'   year = 2017,
 #'   harmonize = FALSE,
 #'   geometry = "municipality"

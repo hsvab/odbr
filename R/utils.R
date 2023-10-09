@@ -27,7 +27,7 @@ compose_name <- function(city, year, harmonize, level = "od") {
 }
 
 # Function to convert sav to csv.gz file, and upload to repository -------------
-upload_sav_db_to_repo <- function(city, year, harmonize) {
+upload_sav_db_to_repo <- function(city, year, harmonize, repository, tag) {
   base_filename <- paste0(
     compose_file_path(city, year, harmonize), "/",
     compose_name(city, year, harmonize)

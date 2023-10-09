@@ -20,7 +20,7 @@ piggyback::pb_new_release(
 # Database ---------------------------------------------------------------------
 for (year in years) {
   for (harmonization in harmonize) {
-    upload_sav_db_to_repo(city, year, harmonization)
+    upload_sav_db_to_repo(city, year, harmonization, repository, tag)
   }
 }
 
