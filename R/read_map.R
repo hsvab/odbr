@@ -51,24 +51,27 @@ read_map <- function(city = "S\u00E3o Paulo",
   city_clean <- clean_string(city)
 
   # Validate if there is any metadata entry for the given arguments
-  if (nrow(metadata[clean_string(odbr::metadata$city) == city_clean &
-                    odbr::metadata$year == year &
-                    odbr::metadata$harmonized == harmonized &
-                    odbr::metadata$geometry == geometry,]) == 0) {
+  if (nrow(odbr::metadata[clean_string(odbr::metadata$city) == city_clean &
+    odbr::metadata$year == year &
+    odbr::metadata$harmonized == harmonize, ]) == 0) {
     usethis::ui_stop("There is no geometry data for:
                         - city: {city}
                         - year: {year}
-                        - harmonized: {harmonized}
+                        - harmonized: {harmonize}
                         - geometry: {geometry}
-                     Check the metadata object for available cities and cohorts.")
+                     Check the metadata object for available data.")
   }
 
   # Creating the filename to download
-  filename_to_download <- paste0(compose_name(city,
-                                              year,
-                                              harmonize,
-                                              geometry),
-                                 ".gpkg")
+  filename_to_download <- paste0(
+    compose_name(
+      city,
+      year,
+      harmonize,
+      geometry
+    ),
+    ".gpkg"
+  )
 
   # Calling the "download_piggyback" function with "filename_to_download" as
   # parameter and saving the function return in "temporary_filename"

@@ -34,16 +34,16 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   city_clean <- clean_string(city)
 
   # Validate if there is any metadata entry for the given arguments
-  if (nrow(metadata[clean_string(odbr::metadata$city) == city_clean &
-                    odbr::metadata$year == year &
-                    odbr::metadata$harmonized == harmonized &
-                    odbr::metadata$language == language,]) == 0) {
+  if (nrow(odbr::metadata[clean_string(odbr::metadata$city) == city_clean &
+    odbr::metadata$year == year &
+    odbr::metadata$harmonized == harmonize &
+    odbr::metadata$language == language, ]) == 0) {
     usethis::ui_stop("There is no dictionary for:
                         - city: {city}
                         - year: {year}
-                        - harmonized: {harmonized}
+                        - harmonized: {harmonize}
                         - language: {language}
-                     Check the metadata object for available cities and cohorts.")
+                     Check the metadata object for available data.")
   }
 
   # Creating the dictionary filename
