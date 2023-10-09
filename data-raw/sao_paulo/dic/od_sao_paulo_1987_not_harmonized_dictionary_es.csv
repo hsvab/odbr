@@ -1,189 +1,258 @@
-variable_name;decription;categories;class
-zona;household zone;1 to 243;factor
-subzona;household subzone;1 to 633;factor
-munires;household municipality;1 to 27;factor
-nota;score;;numeric
-conglome;conglomerate;11 to 33;factor
-bolsao;area;0 to 4;factor
-setores;sectors;1 to 81;factor
-id_dom;household identifier;;factor
-f_dom;household first occurrence identifier;"0 – additional household records
-1 – first household record";factor
-fe_dom;household expansion factor;;numeric
-domicil;household number;;factor
-tipo_dom;household type;"1 – private
-2 – collective";factor
-pess_fam;resident person from the family;;factor
-não_res;non-residente person;;factor
-condmora;housing conditions;"1 – owned and paid for
-2 – owned in payment
-3 – rented 
-4 – leased 
-5 – other";factor
-aluguel;instalment or rent;;numeric
-f_fam;family first occurrence identifier;"0 – additional family records
-1 – first family record";factor
-fe_fam;family expansion factor;;numeric
-no_fam;family number;;factor
-tot_fam;total number of families;;numeric
-qt_auto;number of vehicles;;numeric
-codrendf;household income code;"0 – answered
-1 – don't know
-2 – did not answer
-3 – does not apply";factor
-redfam;monthly family income;;numeric
-f_pess;person first occurrence identifier;"0 – additional person records
-1 – first person record";factor
-fe_pess;person expansion factor;;numeric
-pessoa;person number;;factor
-sit_fam;family status;"1 – head of household
-2 – spouse
-3 – child 
-4 – relative
-5 – household member
-6 – resident employee
-7 – non-resident visitor";factor
-idade;age;;numeric
-sexo;sex;"1 – Male
-2 – Female";factor
-grau_ins;educational level;"1 – no education
-2 – Primary incomplete
-3 – Primary completed
-4 – Elementary school incomplete
-5 – Elementary school completed
-6 – high school incomplete
-7 – high school completed
-8 – university graduate incomplete
-9 – university graduate completed";factor
-ocupacao;profession categorization;"1 – student
-2 – housewife
-3 – retired
-4 – no occupation (never worked)
-5 – unemployed
-6 – on leave
-11 – non-specialised services
-12 – semi-specialised services
-13 – clerks
-14 – commerce employees/salesman/broker/other
-15 – head/supervisor of specialized workers
-16 – office employees with supervisor level
-17 – managerial employees
-18 – employees with university degree
-21 – unskilled workers
-22 – semi-specialised workers
-23 – specialized workers working for third parties
-24 – specialized workers working in factories
-25 – head/supervisor of specialized workers
-26 – rural workers
-27 – rural workers at foreman level
-31 – self-employed - autonomous
-32 – self-employed - working for him/herself
-33 – self-employed - specialized workers
-34 – self-employed - intellectual/mental work
-35 – self-employed - highly specialized professionals
-36 – self-employed - with university degree
-41 – government employees working in non-specialized services  
-42 – government employees working in semi-specialized services  
-43 – clerks and office assistants working as government employees
-44 – government employees at supervisor Level
-45 – government employees at director Level
-46 – government employees with university degree
-51 – partners or owners of small businesses
-52 – technicians, teachers, craftsmen, artisans, partners/owners of small businesses
-53 – industrialists and traders, partners or owners of small businesses
-54 – technicians, teachers, craftsmen, artisans, partners/owners of large/medium-sized businesses
-55 – industrialists and traders, partners or owners of medium-sized businesses
-56 – industrialists and traders, partners or owners of large businesses
-57 – farmers who rent farms, ranches, granges, etc.
-58 – farmers who own farms
-59 – large farmers";factor
-ramoativ;field of activity;"1 – agriculture
-2 – construction
-3 – industry
-4 – commerce
-5 – public employees
-6 – transport services
-7 – services employees
-8 – self-employed 
-9 – other
-10 – does not aplly";factor
-co_ren_i;individual income code;"1 – has income
-2 – no income
-3 – did not inform";factor
-vl_ren_i;individual monthly income;;numeric
-zonaesc1;school 1 zone;;factor
-subesc1;school 1 subzone;;factor
-muniesc1;school 1 subzone;;factor
-zonaesc2;school 2 zone;;factor
-subesc2;school 2 subzone;;factor
-zonatra1;first job zone;;factor
-subtra1;first job subzone;;factor
-munitra1;first job municipality;;factor
-zonatra2;second job zone;;factor
-subtra2;second job subzone;;factor
-munitra2;second job municipality;;factor
-id_viage;trip identifier;"0 – no trip
-1 – there is trip";factor
-fe_via;trip expansion factor;;numeric
-zonao;origin zone;;factor
-subor;origin subzone;;factor
-muniorig;origin municipality;;factor
-bolsaoor;origin area;;factor
-setoror;origin sector;;factor
-zonad;destination zone;;factor
-subdes;destination subzone;;factor
-munidest;destination municipality;;factor
-bolsaode;destination area;;factor
-setorde;destination sector;;factor
-motivo_o;trip purpose at origin;"1 – work - industry
-2 – work - commerce
-3 – work - services
-4 – school/education
-5 – shopping
-6 – business
-7 – doctor / dentist / health
-8 – recreation / visits
-9 – serving a passenger (accompanying someone)
-10 – residence";factor
-motivo_d;trip purpose at destination;same as motivo_o;factor
-modo1;first mode;"1 – trolleybus
-2 – school/company bus
-3 – driving car
-4 – car passenger 
-5 – taxi
-6 – van 
-7 – subway
-8 – train
-9 – motorcycle
-10 – bicycle
-11 – on foot
-12 – other";factor
-modo2;second mode;same as mode 1;factor
-modo3;third mode;same as mode 1;factor
-modoprin;main mode;same as mode 1;factor
-tipo_vg;trip type;"1 – collective
-2 – individual
-3 – on foot";factor
-hsaida;departure time – hour;;numeric
-minsaida;departure time – minutes;;numeric
-anda_o;walking period at origin (in minutes);;numeric
-h_cheg;arrival time – hour;;numeric
-mincheg;arrival time – minutes;;numeric
-anda_d;walking period at destination (in minutes);;numeric
-duracao;trip duration (in minutes);;numeric
-tipoestc;car parking type;"1 – “blue zone” / parking meter
-2 – single parking
-3 – monthly parking
-4 – own car parking space
-5 – on street
-6 – sponsored parking
-7 – no parking";factor
-custoest;car parking cost;;numeric
-pqnaocar;non-using car code;"1 – not available
-2 – expensive parking
-3 – it is difficult to park
-4 – preferred a cheaper mode
-5 – preferred a more convenient mode
-6 – other";factor
-numviag;trip number;;factor
-ordem;database record order;;factor
+nome_da_variavel;descricao;categorias;classe
+zona;zona do domicílio;1 a 254;fator
+sz;subzona do domicílio;1 a 9;fator
+szseq;subzona sequencial do domicílio;1 a 1.012;fator
+muni_dom;município do domicílio;1 a 38;fator
+faixa;faixa de consumo de energia elétrica;1 a 4;fator
+id_dom;identifica domicílio;;fator
+f_dom;identifica primeiro registro do domicílio;"0 – Registros complementares do domicílio
+1 – Primeiro registro do domicílio";fator
+fe_dom;fator de expansão do domicílio;;numérica
+domicil;número do domicílio;;fator
+data;data da entrevista;;data
+tipo_dom;tipo de domicílio;"1 – individual
+2 – coletivo";fator
+fam_dom;número de famílias no domicílio;;numérica
+f_fam;identifica primeiro registro da família;"0 – Demais  registros
+1 – Primeiro registro da família";fator
+fe_fam;fator de expansão da família;;numérica
+familia;número da família;;fator
+cd_entre;código da entrevista;"1 - Recusa Total
+2 - Moradores Ausentes
+3 - Domicílio Vago
+4 – Incompleta
+5 - Completa sem viagem
+6 - Completa com viagem";fator
+tp_rbair;tempo de residência no bairro;;numérica
+condmora;condição de moradia;"1 - Não se aplica
+2 - Não respondeu 
+3 - Alugada
+4 - Própria";fator
+alug_sm;valor do aluguel em salários mínimos;;numérica
+valuguel;valor do aluguel ajustado – set/87;;numérica
+ins_chef;grau de instrução do chefe da família;"1 - Analfabeto/4ª Série Incompleta
+2 - 4ª Série Completa
+3 - 1º Grau Completo
+4 – Colegial Completo
+5 – Superior Completo ";fator
+qt_tv;quantidade de televisores;;numérica
+qt_radio;quantidade de rádios;;numérica
+qt_banho;quantidade de banheiros;;numérica
+qt_auto;quantidade de automóveis;;numérica
+qt_empre;quantidade de empregados domésticos;;numérica
+qt_aspir;quantidade de aspiradores de pó;;numérica
+qt_mlava;quantidade de máquinas de lavar;;numérica
+abaabipe;classificação socioeconômica ABA-ABIPEME;"1 – A
+2 – B
+3 – C
+4 – D
+5 – E";fator
+pontoaba;ponto-Aba - total de todos os critérios ABA;;numérica
+renda_fa;renda familiar ajustado - set/87 ;;numérica
+cd_renfa;código de renda familiar;"1 - Não Tem Renda
+2 - Renda Familiar Incompleta
+3 - Renda Familiar Completa ";fator
+rendatri;renda familiar atribuída ;;numérica
+cd_ratri;código de renda familiar atribuída;"1 - Não Tem Renda
+2 - Renda Familiar Atribuída pelo Crit.ABA-ABIPEM
+3 - Renda Familiar Pesquisada";fator
+tot_pess;total de pessoas na família;;numérica
+tot_v_fa;total de viagens na família;;numérica
+f_pess;identifica primeiro registro da pessoa;"0 - Demais registros
+1- Primeiro registro da pessoa";fator
+fe_pess;fator de expansão da pessoa;;numérica
+pessoa;número da pessoa;;fator
+sit_fam;situação familiar;"1 - Chefe
+2 - Cônjuge
+3 - Filho(a)
+4 - Parente
+5 - Agregado
+6 - Empregado Residente
+7 – Visitante";fator
+idade;idade (anos);;numérica
+fxetod;faixa etária (anos);"1 – até 3
+2 – 4 a 6
+3 – 7 a 10
+4 – 11 a 14
+5 – 15 a 17
+6 – 18 a 22
+7 – 23 a 29
+8 – 30 a 39
+9 – 40 a 49
+10 – 50 a 59
+11 – 60 e mais ";fator
+sexo;sexo;"1 - Masculino
+2 – Feminino";fator
+estuda;estuda atualmente? ;"1 – Sim
+2 – Não";fator
+grau_ins;grau de instrução;"0 – não declarou
+1 – não alfabetizado/4ª série incompleta
+2 – 4ª série completa
+3 – 1° grau completo
+4 – colegial completo
+5 – superior completo";fator
+clas_ati;classe de atividade da empresa que trabalha;"0 - Não Declarou
+1 – Agrícola
+2 - Construção Civil
+3 – Indústria
+4 – Comércio
+5 - Funcionalismo Público
+6 - Serviços de Transporte
+7 - Empresa de Serviços
+8 - Serviços Autônomo
+9 – Outros
+10 - Não se Aplica ";fator
+set_ativ;setor de atividade agregado ;"1 – Indústria
+2 – Comércio
+3 – Serviços
+4 - Outros ";fator
+ocupacao;ocupação;"0 - Não Respondeu
+1 - Estudante
+2 - Prendas Domésticas
+3 - Aposentado
+4 - Sem Ocupação, Nunca Trabalhou
+5 - Desempregado Temporariamente
+6 - Em Licença, Afastado
+11 - Serv.Não Espec.: Office-boy, Faxineiro, etc
+12 - Serv.Semi-Espec.: Zelador, Telef., Motorista
+13 - Escriturário
+14 - Comércio: Vendedor, Corretor, etc
+15 - Chefe de Serv. Espec.
+16 - Nível Superior em Escritório
+17 - Empregado c/Nível de gerência
+18 - Empregado Nível Superior
+21 - Operários Sem Espec.
+22 - Operários Semi-Espec.
+23 - Oper. Espec.de Oficinas:Técn., Artesões, etc
+24 - Operário Espec. (fábrica)
+25 - Chefe de Operários Espec.
+26 - Trabalhadores Rurais
+27 - Trabalhador Rural Nível Capataz
+31 - Autônomo Serv: Vendedor, Engraxate, etc
+32 - Autônomo Serv. Semi-Espec
+33 - Autônomo Nível de Operário Espec.
+34 - Autônomo Trab. Intelectual, Mental
+35 - Autônomo Téc.Altamente Espec.
+36 - Autônomo Nível Universitário
+41 - Func.Público Serv. Não Espec.
+42 - Func.Público Serv. Semi Espec.
+43 - Func.Público Escriturário, Aux.Escrit.
+44 - Func.Público Nível Superior, Professores
+45 - Func.Público Nível Diretor
+46 - Func.Público Altos Cargos Públicos
+47 - Func.Público Militares
+51 - Sócio/Propr de Pequeno Comércio
+52 - Sócio/Propr de Firma Pequena Serviços
+53 - Sócio/Propr Micro-Empresa Ind./Com.
+54 - Sócio/Propr de Firma Grande/Média de Serv.
+55 - Sócio/Propr Empresa Média Ind/Com
+56 - Sócio/Propr Empresa Grande Ind/Com
+57 - Agricultor Arrendatário Terra
+58 - Agricultor Proprietário Terra
+59 - Grande Fazendeiro";fator
+cd_ren_i;código de renda individual;"1 – Não Tem Renda
+2 – Não Declarou
+3 – Declarou";fator
+vl_ren_i;renda individual mensal em salários mínimos;;numérica
+fx_ren_i;faixa de renda individual;"0 - Não Declarou
+1 - até 1 SM
+2 - 1-2 SM
+3 - 2-3 SM
+4 - 3-4 SM
+5 - 4-5 SM
+6 - 5-6 SM
+7 - 6-7 SM
+8 - 7-8 SM
+9 - 8-9 SM
+10 - 9-10 SM
+11 - 10-12 SM
+12 - 12-15 SM
+13 - 15-20 SM
+14 - 20-25 SM
+15 - 25-30 SM
+16 - 30-40 SM
+17 - 40-50 SM
+18 - mais de 50 SM ";fator
+vren_ind;valor da renda individual ajustado-set/87;;numérica
+zonaesc;zona da escola;;fator
+szescola;subzona da escola;;fator
+szeseq;subzona sequencial da escola;;fator
+muniesc;município da escola 1;;fator
+zonatra1;zona do primeiro trabalho;;fator
+sztrab1;subzona do primeiro trabalho;;fator
+szt1seq;subzona sequencial do primeiro trabalho;;fator
+munitra1;município do primeiro trabalho;;fator
+zonatra2;zona do segundo trabalho;;fator
+sztrab2;subzona do segundo trabalho;;fator
+szt2seq;subzona sequencial do segundo trabalho;;fator
+munitra2;município do segundo trabalho;;fator
+vig_pess;Número de Viagem da Pessoa;;numérica
+f_via;Identifica Primeiro Registro da Viagem;"0 - Demais registros
+1- Primeiro registro da pessoa ";fator
+fe_via;fator de expansão de viagem;;numérica
+dia_sem;dia da semana;"2 – Segunda-feira
+3 – Terça-feira
+4 – Quarta-feira
+5 – Quinta-feira
+6 – Sexta-feira ";fator
+zona_o;zona de origem;;fator
+szo;subzona de origem;;fator
+szoseq;subzona sequencial de origem;;fator
+muniorig;município de origem;;fator
+zona_d;zona de destino;;fator
+szd;subzona de destino;;fator
+szdseq;subzona sequencial de destino;;fator
+munidest;município de destino;;fator
+motivo_o;motivo da viagem na origem;"1 - Trabalho Indústria
+2 - Trabalho Comércio
+3 - Trabalho Serviços
+4 - Escola/Educação
+5 - Compras
+6 - Negócios
+7 - Médico/Dentista/Saúde
+8 - Recreação/Visitas
+9 – Residência";fator
+motivo_d;motivo da viagem no destino;idem a motivo_o;fator
+mot_sres;motivo de destino sem residência;"1 - Trabalho Indústria
+2 - Trabalho Comércio
+3 - Trabalho Serviços
+4 - Escola/Educação
+5 - Compras
+6 - Negócios
+7 - Médico/Dentista/Saúde
+8 – Recreação/Visitas";fator
+modo1;primeiro modo;"1 - Ônibus Diesel
+2 - Trólebus
+3 - Ônibus Fretado
+4 - Escolar
+5 - Dirigindo Automóvel
+6 - Passageiro de Automóvel
+7 - Táxi
+8 - Lotação/Perua
+9 - Metrô
+10 - Trem
+11 - Moto
+12 - Bicicleta
+13 - A Pé
+14 - Caminhão
+15 - Outros";fator
+modo2;segundo modo;idem a o modo1;fator
+modo3;terceiro modo;idem a o modo1;fator
+h_saida;hora da saída;;numérica
+minsaida;minutos da saída;;numérica
+anda_o;tempo andando na origem (em minutos);;numérica
+h_cheg;hora da chegada;;numérica
+mincheg;minutos da chegada;;numérica
+anda_d;tempo andando até o destino (em minutos);;numérica
+estac;tipo de estacionamento;"1 - Zona Azul/Parquímetro
+2 - Estacionamento Particular
+3 - Estacionamento Próprio
+4 - Estacionamento Patrocionado
+5 - Meio Fio
+6 - Não Estacionou";fator
+duracao;duração da viagem (em minutos);;numérica
+modoprin;modo principal;idem a o modo1;fator
+tipo_vg;tipo de viagem;"1 - Coletivo
+2 – Individual
+3 - A pé";fator
+id_ordem;número de ordem do registro;;fator

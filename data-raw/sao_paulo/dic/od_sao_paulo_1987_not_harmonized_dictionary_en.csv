@@ -1,37 +1,63 @@
 variable_name;decription;categories;class
-zona;household zone;1 to 243;factor
-subzona;household subzone;1 to 633;factor
-munires;household municipality;1 to 27;factor
-nota;score;;numeric
-conglome;conglomerate;11 to 33;factor
-bolsao;area;0 to 4;factor
-setores;sectors;1 to 81;factor
+zona;household zone;from 1 to 254;factor
+sz;household subzone;from 1 to 9;factor
+szseq;sequential number of the household subzone;from 1 to 1.012;factor
+muni_dom;household municipality;from 1 to 38;factor
+faixa;electricity consumption range;from 1 to 4;factor
 id_dom;household identifier;;factor
 f_dom;household first occurrence identifier;"0 – additional household records
 1 – first household record";factor
 fe_dom;household expansion factor;;numeric
 domicil;household number;;factor
+data;interview date;;date
 tipo_dom;household type;"1 – private
 2 – collective";factor
-pess_fam;resident person from the family;;factor
-não_res;non-residente person;;factor
-condmora;housing conditions;"1 – owned and paid for
-2 – owned in payment
-3 – rented 
-4 – leased 
-5 – other";factor
-aluguel;instalment or rent;;numeric
+fam_dom;number of families in the household;;numeric
 f_fam;family first occurrence identifier;"0 – additional family records
 1 – first family record";factor
 fe_fam;family expansion factor;;numeric
-no_fam;family number;;factor
-tot_fam;total number of families;;numeric
-qt_auto;number of vehicles;;numeric
-codrendf;household income code;"0 – answered
-1 – don't know
+familia;family number;;factor
+cd_entre;interview code;"1 - Total Refusal
+2 - Absent Residents
+3 - Vacant Household
+4 – Incomplete
+5 - Complete without trip
+6 - Complete with trip";factor
+tp_rbair;time lived in the neighbourhood;;numeric
+condmora;housing conditions;"1 – does not apply
 2 – did not answer
-3 – does not apply";factor
-redfam;monthly family income;;numeric
+3 – rented 
+4 – owned";factor
+alug_sm;rent in minimum wages;;numeric
+valuguel;adjusted rent - sep/87;;numeric
+ins_chef;educational level of head of household;"1 – no education / Primary incomplete
+2 – Primary completed
+3 – Elementary school completed
+4 – High School completed
+5 – University graduate completed";factor
+qt_tv;number of TV sets;;numeric
+qt_radio;number of radios;;numeric
+qt_banho;number of bathrooms;;numeric
+qt_auto;number of cars;;numeric
+qt_empre;number of domestic workers;;numeric
+qt_aspir;number of vacuum cleaners;;numeric
+qt_mlava;number of washing machines;;numeric
+abaabipe;ABA-ABIPEME socio-economic classification;"1 – A
+2 – B
+3 – C
+4 – D
+5 – E ";factor
+pontoaba;ABA-point - total of all ABA criteria;;numeric
+redfam;Adjusted monthly family income – sep/87;;numeric
+codrendf;household income code;"1 - No Income
+2 - Incomplete Family Income
+3 - Complete Family Income";factor
+rendatri;attributed family income;;numeric
+cd_ratri;attributed family income code;"1 - No Income
+2 - Family Income Assigned by ABA-ABIPEM Criteria
+3 - Family Income Surveyed";factor
+tot_pess;total number of people in the family;;numeric
+tot_v_fa;total trips in the family;;numeric
 f_pess;person first occurrence identifier;"0 – additional person records
 1 – first person record";factor
 fe_pess;person expansion factor;;numeric
@@ -42,19 +68,44 @@ sit_fam;family status;"1 – head of household
 4 – relative
 5 – household member
 6 – resident employee
-7 – non-resident visitor";factor
-idade;age;;numeric
+7 – visitor";factor
+idade;age (years);;numeric
+fxetod;age range (years);"1 – until 3
+2 – from 4 to 6
+3 – from 7 to 10
+4 – from 11 to 14
+5 – from 15 to 17
+6 – from 18 to 22
+7 – from 23 to 29
+8 – from 30 to 39
+9 – from 40 to 49
+10 – from 50 to 59
+11 – 60 or more";factor
 sexo;sex;"1 – Male
 2 – Female";factor
-grau_ins;educational level;"1 – no education
-2 – Primary incomplete
-3 – Primary completed
-4 – Elementary school incomplete
-5 – Elementary school completed
-6 – high school incomplete
-7 – high school completed
-8 – university graduate incomplete
-9 – university graduate completed";factor
+estuda;currently studying?;"1 – Yes
+2 – No";factor
+grau_ins;educational level;"0 –  Did not answer
+1 – No education / Primary incomplete
+2 – Primary completed
+3 – Elementary school completed
+4 – High School completed
+5 – University graduate completed";factor
+clas_ati;class of activity of the company where the person works;"0 – did not answer
+1 – agriculture
+2 – construction
+3 – industry
+4 – commerce
+5 – public employees
+6 – transport services
+7 – services employees
+8 – self-employed 
+9 – other
+10 – does not aplly";factor
+set_ativ;aggregated activity sector;"1 - Industry
+2 - Commerce
+3 - Services
+4 – Other";factor
 ocupacao;profession categorization;"1 – student
 2 – housewife
 3 – retired
@@ -88,6 +139,7 @@ ocupacao;profession categorization;"1 – student
 44 – government employees at supervisor Level
 45 – government employees at director Level
 46 – government employees with university degree
+47 – government employees – military
 51 – partners or owners of small businesses
 52 – technicians, teachers, craftsmen, artisans, partners/owners of small businesses
 53 – industrialists and traders, partners or owners of small businesses
@@ -97,44 +149,59 @@ ocupacao;profession categorization;"1 – student
 57 – farmers who rent farms, ranches, granges, etc.
 58 – farmers who own farms
 59 – large farmers";factor
-ramoativ;field of activity;"1 – agriculture
-2 – construction
-3 – industry
-4 – commerce
-5 – public employees
-6 – transport services
-7 – services employees
-8 – self-employed 
-9 – other
-10 – does not aplly";factor
-co_ren_i;individual income code;"1 – has income
-2 – no income
-3 – did not inform";factor
-vl_ren_i;individual monthly income;;numeric
-zonaesc1;school 1 zone;;factor
-subesc1;school 1 subzone;;factor
-muniesc1;school 1 subzone;;factor
-zonaesc2;school 2 zone;;factor
-subesc2;school 2 subzone;;factor
+cd_ren_i;individual income code;"1 – no income
+2 – did not inform
+3 – has income";factor
+vl_ren_i;individual monthly income in minimum wages (MW);;numeric
+fx_ren_i;individual monthly income range;"0 - did not answer
+1 – until 1 MW
+2 – from 1 to 2 MW
+3 – from 2 to 3 MW
+4 – from 3 to 4 MW
+5 – from 4 to 5 MW
+6 – from 5 to 6 MW
+7 – from 6 to 7 MW
+8 – from 7 to 8 MW
+9 – from 8 to 9 MW
+10 – from 9 to 10 MW
+11 – from 10 to 12 MW
+12 – from 12 to 15 MW
+13 – from 15 to 20 MW
+14 – from 20 to 25 MW
+15 – from 25 to 30 MW
+16 – from 30 to 40 MW
+17 – from 40 to 50 MW
+18 – more tha 50 MW";factor
+vren_ind;adjusted individual income value-sept/87;;numeric
+zonaesc;school zone;;factor
+szescola;school subzone;;factor
+szeseq;sequential number of the school subzone;;factor
+muniesc;school municipality;;factor
 zonatra1;first job zone;;factor
-subtra1;first job subzone;;factor
+sztrab1;first job subzone;;factor
+szt1seq;sequential number of first job subzone;;factor
 munitra1;first job municipality;;factor
 zonatra2;second job zone;;factor
-subtra2;second job subzone;;factor
+sztrab2;second job subzone;;factor
+szt2seq;sequential number of second job subzone;;factor
 munitra2;second job municipality;;factor
-id_viage;trip identifier;"0 – no trip
-1 – there is trip";factor
+vig_pess;;;numeric
+f_via;trip identifier;"0 – additional person records
+1 – first person record ";factor
 fe_via;trip expansion factor;;numeric
-zonao;origin zone;;factor
-subor;origin subzone;;factor
+dia_sem;weekday;"2 – Monday
+3 – Tueusday
+4 – Wednesday
+5 – Thursday
+6 – Friday";factor
+zona_o;origin zone;;factor
+szo;origin subzone;;factor
+szoseq;sequential number of origin subzone;;factor
 muniorig;origin municipality;;factor
-bolsaoor;origin area;;factor
-setoror;origin sector;;factor
-zonad;destination zone;;factor
-subdes;destination subzone;;factor
+zona_d;destination zone;;factor
+szd;destination subzone;;factor
+szdseq;sequential number of destination subzone;;factor
 munidest;destination municipality;;factor
-bolsaode;destination area;;factor
-setorde;destination sector;;factor
 motivo_o;trip purpose at origin;"1 – work - industry
 2 – work - commerce
 3 – work - services
@@ -143,47 +210,48 @@ motivo_o;trip purpose at origin;"1 – work - industry
 6 – business
 7 – doctor / dentist / health
 8 – recreation / visits
-9 – serving a passenger (accompanying someone)
-10 – residence";factor
+9 – residence";factor
 motivo_d;trip purpose at destination;same as motivo_o;factor
-modo1;first mode;"1 – trolleybus
-2 – school/company bus
-3 – driving car
-4 – car passenger 
-5 – taxi
-6 – van 
-7 – subway
-8 – train
-9 – motorcycle
-10 – bicycle
-11 – on foot
-12 – other";factor
-modo2;second mode;same as mode 1;factor
-modo3;third mode;same as mode 1;factor
-modoprin;main mode;same as mode 1;factor
-tipo_vg;trip type;"1 – collective
-2 – individual
-3 – on foot";factor
-hsaida;departure time – hour;;numeric
+mot_sres;trip purpose at destination without residence;"1 – work - industry
+2 – work - commerce
+3 – work - services
+4 – school/education
+5 – shopping
+6 – business
+7 – doctor / dentist / health
+8 – recreation / visits";factor
+modo1;first mode;"1 – diesel bus
+2 – trolleybus
+3 – company bus
+4 – school bus
+5 – driving car
+6 – car passenger 
+7 – taxi
+8 – van 
+9 – subway
+10 – train
+11– motorcycle
+12 – bicycle
+13 – on foot
+14- truck
+15 – other";factor
+modo2;second mode;same as modo1;factor
+modo3;third mode;same as modo1;factor
+h_saida;departure time – hour;;numeric
 minsaida;departure time – minutes;;numeric
 anda_o;walking period at origin (in minutes);;numeric
 h_cheg;arrival time – hour;;numeric
 mincheg;arrival time – minutes;;numeric
 anda_d;walking period at destination (in minutes);;numeric
-duracao;trip duration (in minutes);;numeric
-tipoestc;car parking type;"1 – “blue zone” / parking meter
-2 – single parking
-3 – monthly parking
-4 – own car parking space
+estac;car parking type;"1 – “blue zone” / parking meter
+2 – private parking
+3 – own car parking space
+4 – sponsored parking
 5 – on street
-6 – sponsored parking
-7 – no parking";factor
-custoest;car parking cost;;numeric
-pqnaocar;non-using car code;"1 – not available
-2 – expensive parking
-3 – it is difficult to park
-4 – preferred a cheaper mode
-5 – preferred a more convenient mode
-6 – other";factor
-numviag;trip number;;factor
-ordem;database record order;;factor
+6 – no parking";factor
+duracao;trip duration (in minutes);;numeric
+modoprin;main mode;same as modo1;factor
+tipo_vg;trip type;"1 – collective
+2 – individual
+3 – on foot";factor
+id_ordem;database record order;;factor

@@ -3,8 +3,8 @@ Title: Download Data from Brazil's Origin Destination Surveys
 Version: 0.0.0.9001
 Authors@R: c(
     person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
-    person("Diego", "Rabatone Oliveira", , "diraol@diraol.eng.br", role = "aut"),
     person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut", comment = c(ORCID = "0000-0002-3064-4486")),
+    person("Diego", "Rabatone Oliveira", , "diraol@diraol.eng.br", role = "aut"),
     person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut", comment = c(ORCID = "0000-0003-2125-7465"))
   )
 Description: Download Data from Brazil's Origin Destination Surveys. Until now, this package provides the raw information from the São Paulo OD surveys, for all the years available.
