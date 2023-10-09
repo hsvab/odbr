@@ -51,19 +51,19 @@ read_map <- function(city = "S\u00E3o Paulo",
   city_clean <- clean_string(city)
 
   # Argument check - error message if it is passed a non-existent city parameter
-  if (!city_clean %in% clean_string(metadata$city)) {
+  if (!city_clean %in% clean_string(odbr::metadata$city)) {
     usethis::ui_stop("The specified city ({city}) is not available.
                    Check the metadata object for available cities and cohorts.")
   }
 
   # Argument check - error message if it is passed a non-existent year parameter
-  if (!year %in% metadata$year) {
+  if (!year %in% odbr::metadata$year) {
     usethis::ui_stop("The specified year ({year}) is not available.
                    Check the metadata object for available years and cohorts.")
   }
 
   # Argument check - error message if it is passed a non-existent harmonized parameter
-  if (!harmonize %in% metadata$harmonized) {
+  if (!harmonize %in% odbr::metadata$harmonized) {
     usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
                  Check the metadata object for available harmonized parameters and cohorts.")
   }
