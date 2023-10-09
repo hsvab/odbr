@@ -31,10 +31,10 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                             harmonize = FALSE,
                             language = "pt") {
   # Clean the name of the city before comparing to the metadata
-  city_clean <- odbr::clean_string(city)
+  city_clean <- clean_string(city)
 
   # Argument check - error message if it is passed a non-existent city parameter
-  if (!city_clean %in% odbr::clean_string(odbr::metadata$city)) {
+  if (!city_clean %in% clean_string(odbr::metadata$city)) {
     usethis::ui_stop("The specified city ({city}) is not available.
                      Check the metadata object for available cities and cohorts.")
   }
@@ -58,8 +58,8 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   }
 
   # Creating the dictionary filename
-  language_text <- odbr::clean_string(language)
-  od_dic_name <- paste0(odbr::compose_name(city, year, harmonize), "_dictionary_", language_text)
+  language_text <- clean_string(language)
+  od_dic_name <- paste0(compose_name(city, year, harmonize), "_dictionary_", language_text)
 
   # Get the correct dictionary
   od_dic <- get0(od_dic_name, envir = asNamespace("odbr"))
