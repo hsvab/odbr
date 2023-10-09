@@ -33,28 +33,17 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
-  # Argument check - error message if it is passed a non-existent city parameter
-  if (!city_clean %in% clean_string(odbr::metadata$city)) {
-    usethis::ui_stop("The specified city ({city}) is not available.
+  # Validate if there is any metadata entry for the given arguments
+  if (nrow(metadata[clean_string(odbr::metadata$city) == city_clean &
+                    odbr::metadata$year == year &
+                    odbr::metadata$harmonized == harmonized &
+                    odbr::metadata$language == language,]) == 0) {
+    usethis::ui_stop("There is no dictionary for:
+                        - city: {city}
+                        - year: {year}
+                        - harmonized: {harmonized}
+                        - language: {language}
                      Check the metadata object for available cities and cohorts.")
-  }
-
-  # Argument check - error message if it is passed a non-existent year parameter
-  if (!year %in% odbr::metadata$year) {
-    usethis::ui_stop("The specified year ({year}) is not available.
-                 Check the metadata object for available years and cohorts.")
-  }
-
-  # Argument check - error message if it is passed a non-existent harmonized parameter
-  if (!harmonize %in% odbr::metadata$harmonized) {
-    usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
-               Check the metadata object for available harmonizeed parameters and cohorts.")
-  }
-
-  # Argument check - error message if it is passed a non-existent language parameter
-  if (!language %in% odbr::metadata$language) {
-    usethis::ui_stop("The specified language parameter ({language}) is not available.
-               Check the metadata object for available language parameters and cohorts.")
   }
 
   # Creating the dictionary filename

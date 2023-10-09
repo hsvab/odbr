@@ -29,22 +29,15 @@ read_od <- function(city = "S\u00E3o Paulo",
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
-  # Argument check - error message if it is passed a non-existent city parameter
-  if (!city_clean %in% clean_string(odbr::metadata$city)) {
-    usethis::ui_stop("The specified city ({city}) is not available.
-                   Check the metadata object for available cities and cohorts.")
-  }
-
-  # Argument check - error message if it is passed a non-existent year parameter
-  if (!year %in% odbr::metadata$year) {
-    usethis::ui_stop("The specified year ({year}) is not available.
-                   Check the metadata object for available years and cohorts.")
-  }
-
-  # Argument check - error message if it is passed a non-existent harmonized parameter
-  if (!harmonize %in% odbr::metadata$harmonized) {
-    usethis::ui_stop("The specified harmonized parameter ({harmonize}) is not available.
-                 Check the metadata object for available harmonized parameters and cohorts.")
+  # Validate if there is any metadata entry for the given arguments
+  if (nrow(metadata[clean_string(odbr::metadata$city) == city_clean &
+                    odbr::metadata$year == year &
+                    odbr::metadata$harmonized == harmonized,]) == 0) {
+    usethis::ui_stop("There is no data for:
+                        - city: {city}
+                        - year: {year}
+                        - harmonized: {harmonized}
+                     Check the metadata object for available cities and cohorts.")
   }
 
   # Creating the filename to download
