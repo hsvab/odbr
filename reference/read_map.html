@@ -50,7 +50,7 @@ for the same city) or not - the default is the raw base.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">read_map</span><span class="op">(</span>city <span class="op">=</span> <span class="st">"São Paulo"</span>, year <span class="op">=</span> <span class="fl">1977</span>, harmonize <span class="op">=</span> <span class="cn">FALSE</span>, geometry <span class="op">=</span> <span class="st">"zone"</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">read_map</span><span class="op">(</span>city <span class="op">=</span> <span class="st">"São Paulo"</span>, year <span class="op">=</span> <span class="fl">2017</span>, harmonize <span class="op">=</span> <span class="cn">FALSE</span>, geometry <span class="op">=</span> <span class="st">"zone"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -88,33 +88,27 @@ include <code>c("zone","district", "municipality")</code>.</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># return zone data from OD Surveys database as data.frame at a given city and year</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read_map</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"São Paulo"</span>,</span></span>
-<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">1977</span>,</span></span>
+<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"S\u00E3o Paulo"</span>,</span></span>
+<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2017</span>,</span></span>
 <span class="r-in"><span>  harmonize <span class="op">=</span> <span class="cn">FALSE</span>,</span></span>
 <span class="r-in"><span>  geometry <span class="op">=</span> <span class="st">"zone"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The specified city (São Paulo) is not available.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> Check the metadata object for available cities and cohorts.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#' # return district data from OD Surveys database as data.frame at a given city and year</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read_map</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"São Paulo"</span>,</span></span>
-<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">1977</span>,</span></span>
+<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"S\u00E3o Paulo"</span>,</span></span>
+<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2017</span>,</span></span>
 <span class="r-in"><span>  harmonize <span class="op">=</span> <span class="cn">FALSE</span>,</span></span>
 <span class="r-in"><span>  geometry <span class="op">=</span> <span class="st">"district"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The specified city (São Paulo) is not available.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> Check the metadata object for available cities and cohorts.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># return municipality data from OD Surveys database as data.frame at a given city and year</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read_map</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"São Paulo"</span>,</span></span>
-<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">1977</span>,</span></span>
+<span class="r-in"><span>  city <span class="op">=</span> <span class="st">"S\u00E3o Paulo"</span>,</span></span>
+<span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2017</span>,</span></span>
 <span class="r-in"><span>  harmonize <span class="op">=</span> <span class="cn">FALSE</span>,</span></span>
 <span class="r-in"><span>  geometry <span class="op">=</span> <span class="st">"municipality"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The specified city (São Paulo) is not available.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> Check the metadata object for available cities and cohorts.</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
