@@ -48,10 +48,10 @@ read_map <- function(city = "S\u00E3o Paulo",
                      harmonize = FALSE,
                      geometry = "zone") {
   # Clean the name of the city before comparing to the metadata
-  city_clean <- clean_string(city)
+  city_clean <- odbr::clean_string(city)
 
   # Argument check - error message if it is passed a non-existent city parameter
-  if (!city_clean %in% clean_string(odbr::metadata$city)) {
+  if (!city_clean %in% odbr::clean_string(odbr::metadata$city)) {
     usethis::ui_stop("The specified city ({city}) is not available.
                    Check the metadata object for available cities and cohorts.")
   }
@@ -69,15 +69,15 @@ read_map <- function(city = "S\u00E3o Paulo",
   }
 
   # Creating the filename to download
-  filename_to_download <- paste0(compose_name(city,
-                                              year,
-                                              harmonize,
-                                              geometry),
+  filename_to_download <- paste0(odbr::compose_name(city,
+                                                    year,
+                                                    harmonize,
+                                                    geometry),
                                  ".gpkg")
 
   # Calling the "download_piggyback" function with "filename_to_download" as
   # parameter and saving the function return in "temporary_filename"
-  temporary_filename <- download_piggyback(filename_to_download)
+  temporary_filename <- odbr::download_piggyback(filename_to_download)
 
   # Reading shape files
   od_map <- sf::read_sf(temporary_filename)
