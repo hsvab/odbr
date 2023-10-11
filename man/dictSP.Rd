@@ -38,11 +38,11 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 93 r
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 93 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 110 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 110 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
 
