@@ -48,12 +48,47 @@ Like this:
 
 ``` r
 library(odbr)
-## basic example code
+
+# Return data from OD Surveys database as data.frame
+df <- read_od(
+  city = "Sao Paulo",
+  year = 2017,
+  harmonize = FALSE
+  )
+
+# Return zone data from OD Surveys database as sf object at a given city and year
+df <- read_map(
+  city = "Sao Paulo",
+  year = 2017,
+  harmonize = FALSE,
+  geometry = "zone"
+  )
+
+# Return data dictionary from OD Surveys, as data.frame, at a given city and year
+df <- read_dictionary(
+  city = "Sao Paulo",
+  year = 1977,
+  harmonize = FALSE,
+  language = "pt"
+  )
 ```
 
-## Available datasets:
+## Available non-harmonized datasets:
 
-:point_right: **All hamonized datasets use geodetic reference system
+| City      | Years available              | Harmonized | Source                                                                                  |
+|-----------|------------------------------|------------|-----------------------------------------------------------------------------------------|
+| São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | \[Metrô-SP\] (<https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino>) |
+
+point_right: **The original geodetic reference system remained
+unchanged.**
+
+## Available harmonized datasets:
+
+| City      | Years available              | Harmonized | Dictionary languages |
+|-----------|------------------------------|------------|----------------------|
+| São Paulo | 1977, 1987, 1997, 2007, 2017 | Yes        | en, es, pt-br        |
+
+point_right: **All harmonized datasets use geodetic reference system
 “SIRGAS2000”, CRS(4674).**
 
 ## Contributing to odbr
@@ -61,7 +96,7 @@ library(odbr)
 If you would like to contribute to **odbr**, you’re welcome to open an
 issue to explain the proposed a contribution.
 
-## Credits <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
+## Credits
 
 Original databases and shapefiles are created by local official
 government institutions.
@@ -87,7 +122,7 @@ If you want to cite this package, you can cite it as:
       textVersion = "Svab, H.; Milz, B.;  Oliveira, D. R.; Pereira, R. H. M. (2023) odbr: Download Data from Brazil's Origin Destination Surveys v0.1.0, <https://CRAN.R-project.org/package=odbr>."
     )
 
-## Sponsor <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
+## Sponsors <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
 The **odbr** package was initialy sponsored by rOpenSci through its
 Champions Program (2022 edition) whose main goal is to provide support
