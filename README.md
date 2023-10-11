@@ -12,6 +12,9 @@ downloads](http://cranlogs.r-pkg.org/badges/grand-total/odbr?color=blue)](https:
 [![Codecov test
 coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/hsvab/odbr?branch=main)
 [![R-CMD-check](https://github.com/hsvab/odbr/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/hsvab/odbr/actions?query=branch%3Amain)
+[![Champions
+Program](https://raw.githubusercontent.com/ropensci-org/badges/main/svgs/champions-program.svg)](https://ropensci.org/champions/)
+
 <!-- badges: end -->
 
 **odbr** is an R package to download data from Brazil’s Origin
