@@ -23,13 +23,18 @@ same city.
 ## Installation
 
 You can install the development version of odbr from
-[GitHub](https://github.com/) with:
+[CRAN](https://cran.r-project.org/web/packages/odbr/index.html) with:
 
 ``` r
 # install from CRAN
 install.packages("odbr")
 library(odbr)
+```
 
+You can install the development version of odbr from
+[GitHub](https://github.com/) with:
+
+``` r
 # or use the development version with latest features
 devtools::install_github("hsvab/odbr")
 library(odbr)
@@ -59,12 +64,11 @@ issue to explain the proposed a contribution.
 ## Credits <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
 Original databases and shapefiles are created by local official
-government institutions. The **odbr** package was initialy sponsored by
-rOpenSci through its Champions Program (2022 edition) whose main goal is
-to provide support to R developers from around the world who identify
-themselves as members of groups that are systematically excluded from
-the open-source software community. If you want to cite this package,
-you can cite it as:
+government institutions.
+
+The logo was designed by Marcos Kyoto.
+
+If you want to cite this package, you can cite it as:
 
 - Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
   Rafael H. M. (2023) odbr: Download Data from Brazil’s Origin
@@ -82,3 +86,11 @@ you can cite it as:
       url         = "https://CRAN.R-project.org/package=odbr",
       textVersion = "Svab, H.; Milz, B.;  Oliveira, D. R.; Pereira, R. H. M. (2023) odbr: Download Data from Brazil's Origin Destination Surveys v0.1.0, <https://CRAN.R-project.org/package=odbr>."
     )
+
+## Sponsor <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
+
+The **odbr** package was initialy sponsored by rOpenSci through its
+Champions Program (2022 edition) whose main goal is to provide support
+to R developers from around the world who identify themselves as members
+of groups that are systematically excluded from the open-source software
+community.
