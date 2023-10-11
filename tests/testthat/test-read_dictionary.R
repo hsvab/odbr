@@ -30,7 +30,7 @@ test_that("read_dictionary works", {
       city = "São Paulo",
       year = 1977,
       harmonize = TRUE
-      ),
+    ),
     error = TRUE
   )
 })
