@@ -54,7 +54,7 @@ df <- read_od(
   city = "Sao Paulo",
   year = 2017,
   harmonize = FALSE
-  )
+)
 
 # Return zone data from OD Surveys database as sf object at a given city and year
 df <- read_map(
@@ -62,7 +62,7 @@ df <- read_map(
   year = 2017,
   harmonize = FALSE,
   geometry = "zone"
-  )
+)
 
 # Return data dictionary from OD Surveys, as data.frame, at a given city and year
 df <- read_dictionary(
@@ -70,7 +70,7 @@ df <- read_dictionary(
   year = 1977,
   harmonize = FALSE,
   language = "pt"
-  )
+)
 ```
 
 ## Available non-harmonized datasets:
