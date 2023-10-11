@@ -5,11 +5,11 @@
     Condition
       Error:
       ! There is no dictionary for:
-         - city: Manaus
-         - year: 1977
-         - harmonized: FALSE
-         - language: pt
-      Check the metadata object for available data.
+      - city: Manaus
+      - year: 1977
+      - harmonized: FALSE
+      - language: pt
+                       Check the metadata object for available data.
 
 ---
 
@@ -18,11 +18,11 @@
     Condition
       Error:
       ! There is no dictionary for:
-         - city: São Paulo
-         - year: 1978
-         - harmonized: FALSE
-         - language: pt
-      Check the metadata object for available data.
+      - city: São Paulo
+      - year: 1978
+      - harmonized: FALSE
+      - language: pt
+                       Check the metadata object for available data.
 
 ---
 
@@ -31,9 +31,9 @@
     Condition
       Error:
       ! There is no dictionary for:
-         - city: São Paulo
-         - year: 1977
-         - harmonized: TRUE
-         - language: pt
-      Check the metadata object for available data.
+      - city: São Paulo
+      - year: 1977
+      - harmonized: TRUE
+      - language: pt
+                       Check the metadata object for available data.
 
