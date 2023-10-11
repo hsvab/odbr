@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/ODBRlogov4hexagonal.svg" alt="logo" width="180">
+# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/ODBRlogov4hexagonal.png" alt="logo" width="180">
 
 <!-- badges: start -->
 
@@ -56,7 +56,7 @@ library(odbr)
 If you would like to contribute to **odbr**, you’re welcome to open an
 issue to explain the proposed a contribution.
 
-## Credits <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="300" /></a>
+## Credits <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
 Original databases and shapefiles are created by local official
 government institutions. The **odbr** package was initialy sponsored by
