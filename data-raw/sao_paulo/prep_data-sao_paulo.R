@@ -1,4 +1,4 @@
-#' Scripts to prepare Sao Paulo OD data for package realase
+#' Scripts to prepare São Paulo OD data for package release
 #'
 # Setup ------------------------------------------------------------------------
 repository <- "hsvab/odbr"
