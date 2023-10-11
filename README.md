@@ -75,9 +75,9 @@ df <- read_dictionary(
 
 ## Available non-harmonized datasets:
 
-| City      | Years available              | Harmonized | Source                                                                                  |
-|-----------|------------------------------|------------|-----------------------------------------------------------------------------------------|
-| São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | \[Metrô-SP\] (<https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino>) |
+| City      | Years available              | Harmonized | Source                                                                             |
+|-----------|------------------------------|------------|------------------------------------------------------------------------------------|
+| São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino) |
 
 point_right: **The original geodetic reference system remained
 unchanged.**
