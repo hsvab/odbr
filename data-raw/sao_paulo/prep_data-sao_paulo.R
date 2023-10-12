@@ -2,7 +2,7 @@
 #'
 # Setup ------------------------------------------------------------------------
 repository <- "hsvab/odbr"
-tag <- "v0.0.6"
+tag <- "v0.1.0"
 city <- "S\u00E3o Paulo"
 years <- c("1977", "1987", "1997", "2007", "2017")
 harmonize <- c(FALSE) # in the future include TRUE here

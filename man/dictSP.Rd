@@ -44,17 +44,17 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 76 r
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 110 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 124 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 124 rows and 4 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 128 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 76 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 128 rows and 4 columns.
 }
 \source{
 \url{https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino}
