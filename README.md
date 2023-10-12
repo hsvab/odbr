@@ -78,21 +78,18 @@ df <- read_dictionary(
 
 ## Available non-harmonized datasets:
 
-| City      | Years available              | Harmonized | Source                                                                             |
-|-----------|------------------------------|------------|------------------------------------------------------------------------------------|
-| São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino) |
+**The original geodetic reference system remained unchanged.**
 
-point_right: **The original geodetic reference system remained
-unchanged.**
+| City      | Years available              | Harmonized | Dictionary languages | Source                                                                             |
+|-----------|------------------------------|------------|----------------------|------------------------------------------------------------------------------------|
+| São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | en, es, pt-br        | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino) |
 
 ## Available harmonized datasets:
 
-| City      | Years available              | Harmonized | Dictionary languages |
-|-----------|------------------------------|------------|----------------------|
-| São Paulo | 1977, 1987, 1997, 2007, 2017 | Yes        | en, es, pt-br        |
+**All harmonized datasets use geodetic reference system “SIRGAS2000”,
+CRS(4674).**
 
-point_right: **All harmonized datasets use geodetic reference system
-“SIRGAS2000”, CRS(4674).**
+There is not harmonized data available yet.
 
 ## Contributing to odbr
 
