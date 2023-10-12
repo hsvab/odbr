@@ -1,20 +1,20 @@
 Package: odbr
-Title: Download Data from Brazil's Origin Destination Surveys 
-Version: 0.0.0.9001
+Title: Download Data from Brazil's Origin Destination Surveys
+Version: 0.1.0
 Authors@R: c(
     person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
-    person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut", comment = c(ORCID = "0000-0002-3064-4486")),
+    person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-3064-4486")),
     person("Diego", "Rabatone Oliveira", , "diraol@diraol.eng.br", role = "aut"),
-    person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut", comment = c(ORCID = "0000-0003-2125-7465"))
+    person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0003-2125-7465"))
   )
-Description: Download Data from Brazil's Origin Destination Surveys. Until now, this package provides the raw information from the São Paulo OD surveys, for all the years available.
+Description: Download Data from Brazil's Origin Destination Surveys. Until
+    now, this package provides the raw information from the São Paulo OD
+    surveys, for all the years available.
 License: GPL (>= 3) + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
-LazyData: true
 Imports: 
     data.table,
     fs,
@@ -24,5 +24,13 @@ Imports:
     sf,
     usethis
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

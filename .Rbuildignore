@@ -15,3 +15,5 @@
 ^data_prep
 ^docs$
 ^pkgdown$
+^doc$
+^Meta$
