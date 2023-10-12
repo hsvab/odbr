@@ -1,11 +1,11 @@
 variable_name;decription;categories;class
-zona;household zone;1 to 243;factor
-subzona;household subzone;1 to 633;factor
-munires;household municipality;1 to 27;factor
+zona;household zone;from 1 to 243;factor
+subzona;household subzone;from 1 to 633;factor
+munires;household municipality;from 1 to 27;factor
 nota;score;;numeric
-conglome;conglomerate;11 to 33;factor
-bolsao;area;0 to 4;factor
-setores;sectors;1 to 81;factor
+conglome;conglomerate;from 11 to 33;factor
+bolsao;area;from 0 to 4;factor
+setores;sectors;from 1 to 81;factor
 id_dom;household identifier;;factor
 f_dom;household first occurrence identifier;"0 – additional household records
 1 – first household record";factor
@@ -44,17 +44,17 @@ sit_fam;family status;"1 – head of household
 6 – resident employee
 7 – non-resident visitor";factor
 idade;age;;numeric
-sexo;sex;"1 – Male
-2 – Female";factor
+sexo;sex;"1 – male
+2 – female";factor
 grau_ins;educational level;"1 – no education
-2 – Primary incomplete
-3 – Primary completed
-4 – Elementary school incomplete
-5 – Elementary school completed
+2 – primary incomplete
+3 – primary completed
+4 – elementary school incomplete
+5 – elementary school completed
 6 – high school incomplete
 7 – high school completed
-8 – university graduate incomplete
-9 – university graduate completed";factor
+8 – higher education incomplete
+9 – higher education completed";factor
 ocupacao;profession categorization;"1 – student
 2 – housewife
 3 – retired
@@ -111,30 +111,30 @@ co_ren_i;individual income code;"1 – has income
 2 – no income
 3 – did not inform";factor
 vl_ren_i;individual monthly income;;numeric
-zonaesc1;school 1 zone;;factor
-subesc1;school 1 subzone;;factor
-muniesc1;school 1 subzone;;factor
-zonaesc2;school 2 zone;;factor
-subesc2;school 2 subzone;;factor
-zonatra1;first job zone;;factor
-subtra1;first job subzone;;factor
-munitra1;first job municipality;;factor
-zonatra2;second job zone;;factor
-subtra2;second job subzone;;factor
-munitra2;second job municipality;;factor
+zonaesc1;school 1 zone;from 1 to 243;factor
+subesc1;school 1 subzone;from 1 to 633;factor
+muniesc1;school 1 subzone;from 1 to 27;factor
+zonaesc2;school 2 zone;from 1 to 243;factor
+subesc2;school 2 subzone;from 1 to 633;factor
+zonatra1;first job zone;from 1 to 243;factor
+subtra1;first job subzone;from 1 to 633;factor
+munitra1;first job municipality;from 1 to 27;factor
+zonatra2;second job zone;from 1 to 243;factor
+subtra2;second job subzone;from 1 to 633;factor
+munitra2;second job municipality;from 1 to 27;factor
 id_viage;trip identifier;"0 – no trip
 1 – there is trip";factor
 fe_via;trip expansion factor;;numeric
-zonao;origin zone;;factor
-subor;origin subzone;;factor
-muniorig;origin municipality;;factor
-bolsaoor;origin area;;factor
-setoror;origin sector;;factor
-zonad;destination zone;;factor
-subdes;destination subzone;;factor
-munidest;destination municipality;;factor
-bolsaode;destination area;;factor
-setorde;destination sector;;factor
+zonao;origin zone;from 1 to 243;factor
+subor;origin subzone;from 1 to 633;factor
+muniorig;origin municipality;from 1 to 27;factor
+bolsaoor;origin area;from 0 to 4;factor
+setoror;origin sector;from 1 to 81;factor
+zonad;destination zone;from 1 to 243;factor
+subdes;destination subzone;from 1 to 633;factor
+munidest;destination municipality;from 1 to 27;factor
+bolsaode;destination area;from 0 to 4;factor
+setorde;destination sector;from 1 to 81;factor
 motivo_o;trip purpose at origin;"1 – work - industry
 2 – work - commerce
 3 – work - services
@@ -158,9 +158,9 @@ modo1;first mode;"1 – trolleybus
 10 – bicycle
 11 – on foot
 12 – other";factor
-modo2;second mode;same as mode 1;factor
-modo3;third mode;same as mode 1;factor
-modoprin;main mode;same as mode 1;factor
+modo2;second mode;same as modo1;factor
+modo3;third mode;same as modo1;factor
+modoprin;main mode;same as modo1;factor
 tipo_vg;trip type;"1 – collective
 2 – individual
 3 – on foot";factor

@@ -1,189 +1,262 @@
 nome_da_variavel;descricao;categorias;classe
-zona;zona do domicílio;1 a 243;fator
-subzona;subzona do domicílio;1 a 633;fator
-munires;município do domicílio;1 a 27;fator
-nota;nota;;numérica
-conglome;conglomerado;1 a 33;fator
-bolsao;bolsão;0 a 4;fator
-setores;setores;1 a 81;fator
+zona;zona do domicílio;1 a 460;fator
+muni_dom;município do domicílio;1 a 39 ;fator
+co_dom_x;coordenada x domicílio ;;numérica
+co_dom_y;coordenada y domicílio ;;numérica
 id_dom;identifica domicílio;;fator
-f_dom;identifica primeiro registro do domicílio;"0 – Registros complementares do domicílio
-1 – Primeiro registro do domicílio";fator
+f_dom;identifica primeiro registro do domicílio;"0 – demais registros
+1 – primeiro registro do domicílio";fator
 fe_dom;fator de expansão do domicílio;;numérica
-domicil;número do domicílio;;fator
+dom;número do domicílio;;fator
+cd_entre;código da entrevista;"5 – completa sem viagem
+6 – completa com viagem";fator
+data;data da entrevista;;data
 tipo_dom;tipo de domicílio;"1 – particular
-2 – coletivo";fator
-pess_fam;pessoa residente da família;;fator
-não_res;pessoas não residentes;;fator
-condmora;condição de moradia;"1 - Própria paga
-2 - Própria em pagamento
-3 - Alugada
-4 - Cedida
-5 – Outro";fator
-aluguel;prestação ou aluguel;;numérica
-f_fam;identifica primeiro registro da família;"0 – Demais  registros
-1 – Primeiro registro da família";fator
+2 – coletivo
+3 – favela";fator
+no_morad;total de moradores do domicílio;;numérica
+tot_fam;total de famílias no domicílio;;numérica
+id_fam;identifica família;;fator
+f_fam;identifica primeiro registro da família;"0 – demais  registros
+1 – primeiro registro da família";fator
 fe_fam;fator de expansão da família;;numérica
-no_fam;número da família;;fator
-tot_fam;total de famílias;;numérica
-qt_auto;número de veículos;;numérica
-codrendf;código de renda familiar;"0 - Respondeu
-1 - Não sabe
-2 -Não respondeu
-3 -Não se aplica";fator
-redfam;renda familiar mensal;;numérica
-f_pess;identifica primeiro registro da pessoa;"0 - Demais registros
-1- Primeiro registro da pessoa";fator
+familia;número da família;;fator
+no_moraf;total de moradores da família;;numérica
+condmora;condição de moradia;"1 – alugada
+2 – própria
+3 – cedida
+4 – outros
+5 – não respondeu";fator
+qt_radio;quantidade de rádios;;numérica
+qt_gel1;quantidade de geladeiras de uma porta ;;numérica
+qt_gel2;quantidade de geladeiras de duas portas ;;numérica
+qt_tvcor;quantidade de TV a cores;;numérica
+qt_freez;quantidade de freezers;;numérica
+qt_video;quantidade de video cassetes/DVDs;;numérica
+qt_banho;quantidade de banheiros;;numérica
+qt_moto;quantidade de motocicletas;;numérica
+qt_auto;quantidade de automóveis;;numérica
+qt_aspir;quantidade de aspiradores de pó;;numérica
+qt_mlava;quantidade de máquinas de lavar;;numérica
+qt_empre;quantidade de empregados domésticos;;numérica
+qt_micro;quantidade de microcomputadores;;numérica
+qt_bicicle;quantidade de bicicletas;;numérica
+nao_dcl_it;código de declaração de itens de conforto ;"0 - não declarou itens de conforto
+1 - declarou itens de conforto ";fator
+criteriobr;critério de classificação econômica Brasil;"1 – A1
+2 – A2
+3 – B1
+4 – B2
+4 – B2
+5 – C1
+6 – C2
+7 – D
+8 – E";fator
+ano_auto1;ano de fabricação do auto 1;;numérica
+ano_auto2;ano de fabricação do auto 2;;numérica
+ano_auto3;ano de fabricação do auto 3;;numérica
+renda_fa;renda familiar mensal;;numérica
+cd_renfa;código de renda familiar mensal;"1 - renda familiar declarada e maior que zero
+2 - renda familiar declarada como zero
+3 - renda atribuída pelo critério brasil
+4 - renda atribuída pela média da zona ";fator
+id_pess;identifica pessoa;;fator
+f_pess;identifica primeiro registro da pessoa;"0 - demais registros
+1- primeiro registro da pessoa";fator
 fe_pess;fator de expansão da pessoa;;numérica
 pessoa;número da pessoa;;fator
-sit_fam;situação familiar;"1 - Chefe
-2 - Cônjuge
-3 - Filho(a)
-4 - Parente
-5 - Agregado
-6 - Empregado Residente
-7 - Visitante não Residente";fator
-idade;idade;;numérica
-sexo;sexo;"1 - Masculino
-2 – Feminino";fator
-grau_ins;grau de escolaridade;"1 - Sem instrução
-2 - Primário Incompleto
-3 - Primário Completo
-4 - Ginasial Incompleto
-5 - Ginasial Completo
-6 -Colegial Incompleto
-7 - Colegial Completo
-8 - Universitário Incompleto
-9 - Universitário Completo";fator
-ocupacao;ocupação;"1 - Estudante
-2 - Prendas Domésticas
-3 -Aposentado
-4 - Sem Ocupação (nunca trabalhou)
-5 - Desempregado
-6 -Em Licença
-11 - Serviços não Especializados
-12 - Serviços semi-especializados
-13 - Escriturários
-14 - Empregados de Comércio/Vendedor/Corretor/Outros
-15 - Chefe/Supervisor de Operários Especializados
-16 - Empregado de Escritório c/ Nível Supervisor
-17 - Empregados em Empresas c/ Nível Gerente
-18 - Empregados c/ Nível Universitário
-21 - Operários sem Especialização
-22 - Operários semi-especializados
-23 - Operários Especializados Trabalhando p/ Terceiros
-24 - Operários Especializados Trabalhando em Fábricas
-25 - Chefe/Supervisor de Operários Especializados 
-26 - Trabalhadores Rurais
-27 - Trabalhadores Rurais c/ Nível de Capataz
-31- Prestadores de Serviços Autônomos
-32- Prestadores de Serviços por Cta Própria
-33- Operários Especializados Trabalhando por Cta Própria
-34- Prof.Lib.Trab. por Cta Própria c/ Trabalho Intelect/Mental
-35- Prof.Lib.Trab. por Cta Própria c/ Nível Altam. Especializado
-36- Prof.Lib.Trab. por Cta Própria c/ Nível Universitário
-41- Func.Púb.Trab.p/o Governo em Serv.Não Especializados  
-42- Func.Púb.Trab.p/o Governo em Serv.semi-especializados  
-43 - Escriturários e Aux.de Escritório Trab.p/o Governo
-44- Func.Púb.Trab.p/o Governo com Nível de Supervisor
-45- Func.Púb.Trab.p/o Governo com Nível de Diretor
-46 - Func.Púb.Trab.p/o Governo com Nível Universitário
-51 - Sócios ou Donos de Pequeno Comércio
-52 - Téc.,Prof., Artesões, Artífices, Sócios/Donos Firma Pequena
-53 - Industriais e Comerciantes, Sócios ou Donos Firma Pequena
-54 - Téc.,Prof., Artesões, Artífices, Sócios/Donos Firma Grande/Média
-55 - Industriais e Comerciantes, Sócios ou Donos Firma Média
-56 - Industriais e Comerciantes, Sócios ou Donos Firma Grande
-57 - Agricultores Arrendários de Fazendas, Hortas, Granjas, etc.
-58 - Agricultores Proprietários de Fazendas
-59 - Grandes Fazendeiros";fator
-ramoativ;ramo de atividade;"1 – Agrícola 
-2 – Construção Civil
-3 – Industrial
-4 – Comercial 
-5 – Funcionário Público
-6 – Serviços de Transporte
-7 – Empregado Serviços
-8 – Serv. Autônomos
-9 – Outro
-10 – Não se Aplica";fator
-co_ren_i;código de renda individual;"1 – Tem Renda
-2 – Não Tem Renda
-3 – Não Declarou";fator
-vl_ren_i;renda individual mensal;;numérica
-zonaesc1;zona da escola 1;;fator
-subesc1;subzona da escola 1;;fator
-muniesc1;município da escola 1;;fator
-zonaesc2;zona da 2 escola;;fator
-subesc2;subzona da  2 escola;;fator
-zonatra1;zona do primeiro trabalho;;fator
-subtra1;subzona do primeiro trabalho;;fator
-munitra1;município do primeiro trabalho;;fator
-zonatra2;zona do segundo trabalho;;fator
-subtra2;subzona do segundo trabalho;;fator
-munitra2;município do segundo trabalho;;fator
-id_viage;identificador do registro de viagem;"0 – Não Tem Viagem
-1 – Tem Viagem";fator
-fe_via;fator de expansão de viagem com aferição;;numérica
-zonao;zona de origem;;fator
-subor;subzona de origem;;fator
-muniorig;município de origem;;fator
-bolsaoor;bolsão de origem;;fator
-setoror;setor de origem;;fator
-zonad;zona de destino;;fator
-subdes;subzona de destino;;fator
-munidest;município de destino;;fator
-bolsaode;bolsão de destino;;fator
-setorde;setor de destino;;fator
-motivo_o;motivo da viagem na origem;"1 - Trabalho Indústria
-2 - Trabalho Comércio
-3 - Trabalho Serviços
-4 - Escola/Educação
-5 - Compras
-6 - Negócios
-7 - Médico/Dentista/Saúde
-8 - Recreação/Visitas
-9 - Servir Passageiro
-10 – Residência";fator
+sit_fam;situação familiar;"1 – pessoa responsável
+2 – cônjuge/companheiro(a)
+3 – filho(a)/enteado(a)
+4 – outro parente
+5 – agregado
+6 – empregado residente
+7 – parente do empregado";fator
+idade;idade (anos);;numérica
+sexo;sexo;"1 – masculino
+2 – feminino";fator
+estuda;estuda atualmente? ;"1 – não
+2 – creche/pré-escola
+3 – 1o grau / fundamental
+4 – 2o grau / médio
+6 – 3o grau / superior
+7 – outros ";fator
+grau_ins;grau de instrução;"1 – não alfabetizado/primário incompleto
+2 – primário completo/ginásio incompleto
+3 – ginásio completo/colegial incompleto
+4 – colegial completo/superior incompleto
+5 – superior completo";fator
+cd_ativi;condição de atividade ;"1 – tem trabalho
+2 – faz bico
+3 – em licença médica
+4 – aposentado/pensionista
+5 – sem trabalho
+6 – nunca trabalhou
+7 – dona de casa
+8 – estudante";fator
+co_ren_i;condição de renda individual;"1 – tem renda
+2 – não tem renda
+3 – não respondeu";fator
+vl_ren_i;renda individual;;numérica
+zona_esc;zona da escola;1 a 460;fator
+muniesc;município da escola;1 a 39 ;fator
+co_esc_x;coordenada x escola;;numérica
+co_esc_y;coordenada y escola;;numérica
+tipo_esc;tipo de escola;"1 – pública
+2 – particular";fator
+zonatra1;zona do primeiro trabalho;1 a 460;fator
+munitra1;município do primeiro trabalho;1 a 39 ;fator
+co_tr1_x;coordenada x primeiro trabalho;;numérica
+co_tr1_y;coordenada y primeiro trabalho;;numérica
+trab1_re;primeiro trabalho é igual à residência? ;"1 – sim
+2 – não
+3 – sem endereço fixo";fator
+trabext1;realiza trabalho externo – primeiro trabalho;"1 – sim
+2 – não";fator
+ocup1;ocupação do primeiro trabalho;;fator
+setor1;setor de atividade do primeiro trabalho;"01 – agrícola
+02 – construção civil
+03 – indústria
+04 – comércio
+05 – serviços de transporte de carga
+06 – serviço de transporte de passageiros
+07 – serviço creditício-financeiro
+08 – serviço pessoal
+09 – serviço de alimentação
+10 – serviço de saúde
+11 – serviço de educação
+12 – serviço especializado
+13 – serviço de administração pública
+14 – outros serviços";fator
+vinc1;vínculo empregatício do primeiro trabalho ;"1 – assalariado com carteira
+2 – assalariado sem carteira
+3 – funcionário público
+4 – autônomo
+5 – empregador
+6 – profissional liberal
+7 – dono de negócio familiar
+8 – trabalhador familiar";fator
+zonatra2;zona do segundo trabalho;1 a 460;fator
+munitra2;município do segundo trabalho;1 a 39 ;fator
+co_tr2_x;coordenada x segundo trabalho;;numérica
+co_tr2_y;coordenada y segundo trabalho;;numérica
+trab2_re;segundo trabalho é igual à residência? ;"1 – sim
+2 – não
+3 – sem endereço fixo";fator
+trabext2;realiza trabalho externo – segundo trabalho;"1 – sim
+2 – não";fator
+ocup2;ocupação do segundo trabalho;idem a ocup1;fator
+setor2;setor de atividade do segundo trabalho;idem a setor1;fator
+vinc2;vínculo empregatício do segundo trabalho ;idem a vinc1;fator
+n_viag;número da viagem ;;numérica
+fe_via;fator de expansão de viagem;;numérica
+dia_sem;dia da semana;"2 – Segunda-feira
+3 – Terça-feira
+4 – Quarta-feira
+5 – Quinta-feira
+6 – Sexta-feira ";fator
+tot_viag;total de viagens da pessoa;;numérica
+zona_o;zona da origem;1 a 460;fator
+muni_o;município da origem;1 a 39 ;fator
+co_o_x;coordenada x origem;;numérica
+co_o_y;coordenada y origem;;numérica
+zona_d;zona do destino;1 a 460;fator
+muni_d;município do destino;1 a 39 ;fator
+co_d_x;coordenada x destino;;numérica
+co_d_y;coordenada y destino;;numérica
+zona_t1;zona da primeira transferência;1 a 460;fator
+muni_t1;município da primeira transferência;1 a 39 ;fator
+co_t1_x;coordenada x primeira transferência;;numérica
+co_t1_y;coordenada y primeira transferência;;numérica
+zona_t2;zona da segunda transferência;1 a 460;fator
+muni_t2;município da segunda transferência;1 a 39 ;fator
+co_t2_x;coordenada x segunda transferência;;numérica
+co_t2_y;coordenada y segunda transferência;;numérica
+zona_t3;zona da terceira transferência;1 a 460;fator
+muni_t3;município da terceira transferência;1 a 39 ;fator
+co_t3_x;coordenada x terceira transferência;;numérica
+co_t3_y;coordenada y terceira transferência;;numérica
+motivo_o;motivo da viagem na origem;"1 – trabalho indústria
+2 – trabalho comércio
+3 – trabalho serviços
+4 – educação
+5 – compras
+6 – saúde
+7 – lazer
+8 – residência
+9 – procurar emprego
+10 – assuntos pessoais";fator
 motivo_d;motivo da viagem no destino;idem a motivo_o;fator
-modo1;primeiro modo;"1 - Ônibus Trólebus
-2 - Ônibus Escolar/Empresa
-3 - Dirigindo Automóvel
-4 - Passageiro de Automóvel
-5 - Táxi
-6 - Lotação/Perua
-7 - Metrô
-8 - Trem
-9 - Motocicleta
-10 - Bicicleta
-11 - A Pé
-12 – Outros";fator
-modo2;segundo modo;idem a o modo1;fator
-modo3;terceiro modo;idem a o modo1;fator
-modoprin;modo principal;idem a o modo1;fator
-tipo_vg;tipo de viagem;"1 - Coletivo
-2 – Individual
-3 - A pé";fator
-hsaida;hora da saída;;numérica
-minsaida;minutos da saída;;numérica
+mot_sres;motivo no destino sem residência;"1 – trabalho indústria
+2 – trabalho comércio
+3 – trabalho serviços
+4 – educação
+5 – compras
+6 – saúde
+7 – lazer
+9 – procurar emprego
+10 – assuntos pessoais";fator
+servir_o;servir passageiro na origem  ;"1 – sim
+2 – não";fator
+servir_d;servir passageiro no destino ;"1 – sim
+2 – não";fator
+modo1;Modo 1;"01 – ônibus município São Paulo
+02 – ônibus outros municípios
+03 – ônibus metropolitano
+04 – ônibus fretado
+05 – escolar
+06 – dirigindo automóvel
+07 – passageiro de automóvel
+08 – táxi
+09 – microônibus/van município de São Paulo
+10 – microônibus/van outros municípios
+11 – microônibus/van metropolitano
+12 – metrô
+13 – trem
+14 – moto
+15 – bicicleta
+16 – a pé
+17 – outros";fator
+modo2;Modo 2;idem a modo1;fator
+modo3;Modo 3;idem a modo1;fator
+modo4;Modo 4;idem a modo1;fator
+h_saida;hora da saída;;numérica
+min_saida;minutos da saída;;numérica
 anda_o;tempo andando na origem (em minutos);;numérica
 h_cheg;hora da chegada;;numérica
-mincheg;minutos da chegada;;numérica
-anda_d;tempo andando até o destino (em minutos);;numérica
+min_cheg;minutos da chegada;;numérica
+anda_d;tempo andando no destino (em minutos);;numérica
 duracao;duração da viagem (em minutos);;numérica
-tipoestc;tipo de estacionamento;"1 - Zona Azul/Parquímetro
-2 - Estacionamento Avulso
-3 - Estacionamento Mensal
-4 - Estacionamento Próprio
-5 - Meio Fio/Logradouro
-6 - Estacionamento Patrocionado
-7 - Não Estacionou";fator
-custoest;custo do estacionamento;;numérica
-pqnaocar;código de não utilização do carro;"1 - Não Disponível
-2 - Estacionamento Caro
-3 - Difícil de Estacionar
-4 - Condução mais Barata
-5 - Condução mais Conveniente
-6 – Outros";fator
-numviag;número da viagem;;fator
-ordem;ordem do registro no banco de dados;;fator
+modoprin;modo principal;idem a modo1;fator
+tipvg;tipo de viagem;"1 – coletivo
+2 – individual
+3 – a pé
+4 – bicicleta";fator
+pag_viag;quem pagou a viagem;"1 – você/sua família
+2 – empregador
+3 – isento
+4 – outros";fator
+tp_esauto;tipo de estacionamento automóvel;"1 – não estacionou
+2 – zona azul/zona marrom
+3 – patrocinado
+4 – próprio
+5 – meio-fio
+6 – avulso
+7 – mensal
+8 – não respondeu ";fator
+vl_est;valor do estacionamento automóvel;;numérica
+pe_bici;por que viajou a pé ou bicicleta? ;"1 – pequena distância
+2 – condução cara
+3 – ponto/estação distante
+4 – condução demora a passar
+5 – viagem demorada
+6 – condução lotada
+7 – atividade física
+8 – outros motivos ";fator
+tp_esbici;tipo de estacionamento bicicleta ;"1 – bicicletário gratuito
+2 – bicicletário pago
+3 – local privado
+4 – rua/local público
+5 – outros";fator
+distancia;distância em linha reta entre a coordenada de origem e a coordenada de destino (em metros);;numérica
+id_ordem;número de ordem do registro;1 a 196698;fator
