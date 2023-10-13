@@ -79,7 +79,7 @@ df <- read_dictionary(
 
 ## Available non-harmonized datasets:
 
-**The original geodetic reference system remained unchanged.** 
+**The original geodetic reference system remained unchanged.**
 
 |City|Years available| Harmonized |Dictionary languages | Source|
 |-----|-----|-----|-----|-----|
@@ -89,7 +89,7 @@ df <- read_dictionary(
 
 ## Available harmonized datasets:
 
-**All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).** 
+**All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).**
 
 There is not harmonized data available yet.
 
@@ -124,4 +124,4 @@ bibentry(
 
 ## Sponsors <a href="https://ropensci.org/"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
-The **odbr** package was initialy sponsored by rOpenSci through its Champions Program (2022 edition) whose main goal is to provide support to R developers from around the world who identify themselves as members of groups that are systematically excluded from the open-source software community.
+The **odbr** package was initially sponsored by rOpenSci through its Champions Program (2022 edition) whose main goal is to provide support to R developers from around the world who identify themselves as members of groups that are systematically excluded from the open-source software community.

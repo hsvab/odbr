@@ -8,7 +8,7 @@
 #' \describe{
 #'  \item{city}{City name}
 #'  \item{year}{Year of the survey}
-#'  \item{harmonized}{A logical value showing wheter the dataset was harmonized}
+#'  \item{harmonized}{A logical value showing whether the dataset was harmonized}
 #'  \item{language}{Language of the dictionary}
 #'  }
 "metadata"

@@ -19,12 +19,12 @@ knitr::opts_chunk$set(
 
 **odbr** is an R package to download data from Brazil's Origin Destination
 Surveys.The package provides databases, maps, and data dictionaries in English,
-Portuguese, and Spanish. Furthermore, it is possible to download harmonized data 
+Portuguese, and Spanish. Furthermore, it is possible to download harmonized data
 across different cohorts for the same city.
 
 
 *obs.:* The package is still under development. At the moment, odbr only
-includes raw data from the 1977 to 2017 OD survyes from São Paulo, but it is 
+includes raw data from the 1977 to 2017 OD surveys from São Paulo, but it is
 being expanded to cover more years and cities.
 
 
@@ -95,7 +95,7 @@ df <- read_dictionary(
 
 ## Available non-harmonized datasets:
 
-**The original geodetic reference system remained unchanged.** 
+**The original geodetic reference system remained unchanged.**
 
 |City|Years available| Harmonized |Dictionary languages | Source|
 |-----|-----|-----|-----|-----|
@@ -105,6 +105,6 @@ df <- read_dictionary(
 
 ## Available harmonized datasets:
 
-**All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).** 
+**All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).**
 
 There is not harmonized data available yet.

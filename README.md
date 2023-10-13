@@ -121,7 +121,7 @@ If you want to cite this package, you can cite it as:
 
 ## Sponsors <a href="https://ropensci.org/"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
-The **odbr** package was initialy sponsored by rOpenSci through its
+The **odbr** package was initially sponsored by rOpenSci through its
 Champions Program (2022 edition) whose main goal is to provide support
 to R developers from around the world who identify themselves as members
 of groups that are systematically excluded from the open-source software
