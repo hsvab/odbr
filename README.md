@@ -22,7 +22,7 @@ same city.
 ## Installation
 
 You can install the development version of odbr from
-[CRAN](https://cran.r-project.org/web/packages/odbr/index.html) with:
+[CRAN](https://CRAN.R-project.org/package=odbr) with:
 
 ``` r
 # install from CRAN
@@ -98,7 +98,7 @@ Original databases and shapefiles are created by local official
 government institutions.
 
 The logo was designed by [Marcos Kyoto de Tani e
-Isoda](https://instagram.com/redes.urbanas?igshid=MzRlODBiNWFlZA==)
+Isoda](https://www.instagram.com/redes.urbanas/)
 
 If you want to cite this package, you can cite it as:
 

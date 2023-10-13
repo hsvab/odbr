@@ -28,7 +28,8 @@ coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https:/
 
 ## Installation
 
-You can install the development version of odbr from [CRAN](https://cran.r-project.org/web/packages/odbr/index.html) with:
+You can install the development version of odbr from
+[CRAN](https://CRAN.R-project.org/package=odbr) with:
 
 ``` r
 # install from CRAN
@@ -102,7 +103,7 @@ If you would like to contribute to **odbr**, you're welcome to open an issue to 
 
 Original databases and shapefiles are created by local official government institutions.
 
-The logo was designed by [Marcos Kyoto de Tani e Isoda](https://instagram.com/redes.urbanas?igshid=MzRlODBiNWFlZA==)
+The logo was designed by [Marcos Kyoto de Tani e Isoda](https://www.instagram.com/redes.urbanas/)
 
 If you want to cite this package, you can cite it as:
 
