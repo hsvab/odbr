@@ -5,10 +5,6 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/odbr)](https://CRAN.R-project.org/package=odbr)
-[![CRAN/METACRAN Total
-downloads](http://cranlogs.r-pkg.org/badges/grand-total/odbr?color=blue)](https://CRAN.R-project.org/package=obbr)
 [![Codecov test
 coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/hsvab/odbr?branch=main)
 [![R-CMD-check](https://github.com/hsvab/odbr/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/hsvab/odbr/actions?query=branch%3Amain)
@@ -101,7 +97,8 @@ issue to explain the proposed a contribution.
 Original databases and shapefiles are created by local official
 government institutions.
 
-The logo was designed by Marcos Kyoto.
+The logo was designed by [Marcos Kyoto de Tani e
+Isoda](https://instagram.com/redes.urbanas?igshid=MzRlODBiNWFlZA==)
 
 If you want to cite this package, you can cite it as:
 
@@ -122,7 +119,7 @@ If you want to cite this package, you can cite it as:
       textVersion = "Svab, H.; Milz, B.;  Oliveira, D. R.; Pereira, R. H. M. (2023) odbr: Download Data from Brazil's Origin Destination Surveys v0.1.0, <https://CRAN.R-project.org/package=odbr>."
     )
 
-## Sponsors <a href="https://ropensci.org/r"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
+## Sponsors <a href="https://ropensci.org/"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
 The **odbr** package was initialy sponsored by rOpenSci through its
 Champions Program (2022 edition) whose main goal is to provide support
