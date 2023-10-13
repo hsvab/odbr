@@ -2,6 +2,7 @@
 title: "Introduction to odbr"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
+urlcolor: blue
 vignette: >
   %\VignetteIndexEntry{Introduction to odbr}
   %\VignetteEngine{knitr::rmarkdown}
@@ -15,6 +16,95 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+
+**odbr** is an R package to download data from Brazil's Origin Destination
+Surveys.The package provides databases, maps, and data dictionaries in English,
+Portuguese, and Spanish. Furthermore, it is possible to download harmonized data 
+across different cohorts for the same city.
+
+
+*obs.:* The package is still under development. At the moment, odbr only
+includes raw data from the 1977 to 2017 OD survyes from São Paulo, but it is 
+being expanded to cover more years and cities.
+
+
+# Installation
+
+You can install the development version of odbr from
+[CRAN](https://cran.r-project.org/web/packages/odbr/index.html) with:
+
+``` r
+# install from CRAN
+install.packages("odbr")
 library(odbr)
 ```
+
+You can install the development version of odbr from
+[GitHub](https://github.com/) with:
+
+``` r
+# or use the development version with latest features
+devtools::install_github("hsvab/odbr")
+library(odbr)
+```
+
+# Basic usage
+
+The package currently includes 2 main functions to download census data:
+
+1. `read_od()`
+2. `read_map()`
+
+
+**odbr** also includes a support function to help users navigate databases,
+providing convenient information on data variables through data dictionaries in
+3 languages (English - en, Portuguese from Brazil - pt and Spanish - es):
+
+3. `read_dicitionary()`
+
+The syntax of all `odbr` functions operate on the same logic so it becomes
+intuitive to download any data set using a single line of code. Like this:
+
+```{r example}
+library(odbr)
+
+# Return data from OD Surveys database as data.frame
+df <- read_od(
+  city = "Sao Paulo",
+  year = 2017,
+  harmonize = FALSE
+)
+
+# Return zone data from OD Surveys database as sf object at a given city and year
+df <- read_map(
+  city = "Sao Paulo",
+  year = 2017,
+  harmonize = FALSE,
+  geometry = "zone"
+)
+
+# Return data dictionary from OD Surveys, as data.frame, at a given city and year
+df <- read_dictionary(
+  city = "Sao Paulo",
+  year = 1977,
+  harmonize = FALSE,
+  language = "pt"
+)
+```
+
+
+## Available non-harmonized datasets:
+
+**The original geodetic reference system remained unchanged.** 
+
+|City|Years available| Harmonized |Dictionary languages | Source|
+|-----|-----|-----|-----|-----|
+|São Paulo| 1977, 1987, 1997, 2007, 2017 | No | en, es, pt-br | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino)
+
+
+
+## Available harmonized datasets:
+
+**All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).** 
+
+There is not harmonized data available yet.
