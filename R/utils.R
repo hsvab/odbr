@@ -60,3 +60,13 @@ upload_sav_db_to_repo <- function(city, year, harmonize, repository, tag) {
 clean_string <- function(text) {
   gsub("~", "", gsub(" ", "_", tolower(iconv(text, to = "ASCII//TRANSLIT"))))
 }
+
+# Dummy function just to make one explicit usage of R.utils (dependency) to
+# please R CMD check test and avoid it complaining that R.utils is listed in the
+# Imports section of DESCRIPTION but it is not being used anywhere.
+# R.utils is a "cross dependency" from piggyback.
+# Got this trick from:
+# https://community.rstudio.com/t/new-r-cmd-check-note-in-r-4-2-0-for-imports-field/143153/2
+.dummy <- function() {
+  R.utils::check.Assert
+}
