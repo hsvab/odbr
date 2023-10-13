@@ -10,7 +10,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0003-2125-7465"))
   )
 Description: Download Data from Brazil's Origin Destination Surveys. Until
-    now, this package provides the raw information from the São Paulo OD
+    now, this package provides the raw information from the Sao Paulo OD
     surveys, for all the years available.
 License: GPL (>= 3) + file LICENSE
 Depends: 
