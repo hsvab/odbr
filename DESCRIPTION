@@ -9,9 +9,9 @@ Authors@R: c(
     person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0003-2125-7465"))
   )
-Description: Download Data from Brazil's Origin Destination Surveys. Until
-    now, this package provides the raw information from the São Paulo OD
-    surveys, for all the years available.
+Description: Provide access to data and metadata from Brazil's Origin
+    Destination Surveys. Please check the package metada (or documentation) for
+    the available surveys.
 License: GPL (>=3)
 Depends: 
     R (>= 2.10)
