@@ -66,7 +66,7 @@ df <- read_map(
 # Return data dictionary from OD Surveys, as data.frame, at a given city and year
 df <- read_dictionary(
   city = "Sao Paulo",
-  year = 1977,
+  year = 2017,
   harmonize = FALSE,
   language = "pt"
 )
