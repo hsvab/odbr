@@ -19,7 +19,7 @@
 #' # return data from OD Surveys database as data.frame
 #' df <- read_od(
 #'   city = "Sao Paulo",
-#'   year = 1977,
+#'   year = 2017,
 #'   harmonize = FALSE
 #' )
 #'
