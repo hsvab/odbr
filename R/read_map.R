@@ -17,32 +17,33 @@
 #' @family Geometry
 #'
 #' @examples
-#' library(odbr)
+#' \dontrun{
+#'   library(odbr)
 #'
-#' # return zone data from OD Surveys database as sf object at a given city and year
-#' df <- read_map(
-#'   city = "Sao Paulo",
-#'   year = 2017,
-#'   harmonize = FALSE,
-#'   geometry = "zone"
-#' )
+#'   # return zone data from OD Surveys database as sf object at a given city and year
+#'   df <- read_map(
+#'     city = "Sao Paulo",
+#'     year = 2017,
+#'     harmonize = FALSE,
+#'     geometry = "zone"
+#'   )
 #'
-#' #' # return district data from OD Surveys database as sf object at a given city and year
-#' df <- read_map(
-#'   city = "Sao Paulo",
-#'   year = 2017,
-#'   harmonize = FALSE,
-#'   geometry = "district"
-#' )
+#'   #' # return district data from OD Surveys database as sf object at a given city and year
+#'   df <- read_map(
+#'     city = "Sao Paulo",
+#'     year = 2017,
+#'     harmonize = FALSE,
+#'     geometry = "district"
+#'   )
 #'
-#' # return municipality data from OD Surveys database as sf object at a given city and year
-#' df <- read_map(
-#'   city = "Sao Paulo",
-#'   year = 2017,
-#'   harmonize = FALSE,
-#'   geometry = "municipality"
-#' )
-#'
+#'   # return municipality data from OD Surveys database as sf object at a given city and year
+#'   df <- read_map(
+#'     city = "Sao Paulo",
+#'     year = 2017,
+#'     harmonize = FALSE,
+#'     geometry = "municipality"
+#'   )
+#' }
 read_map <- function(city = "S\u00E3o Paulo",
                      year = 2017,
                      harmonize = FALSE,

@@ -15,14 +15,15 @@
 #'
 #' @examples
 #' library(odbr)
+#' \dontrun{
 #'
-#' # return data from OD Surveys database as data.frame
-#' df <- read_od(
-#'   city = "Sao Paulo",
-#'   year = 2017,
-#'   harmonize = FALSE
-#' )
-#'
+#'   # return data from OD Surveys database as data.frame
+#'   df <- read_od(
+#'     city = "Sao Paulo",
+#'     year = 2017,
+#'     harmonize = FALSE
+#'   )
+#' }
 read_od <- function(city = "S\u00E3o Paulo",
                     year = 2017,
                     harmonize = FALSE) {
