@@ -29,12 +29,13 @@ database (variable names and reference/geodesic projection over the years,
 for the same city) or not - the default is the raw base.
 }
 \examples{
+\dontshow{if (identical(tolower(Sys.getenv("NOT_CRAN")), "true")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 library(odbr)
 
 # return zone data from OD Surveys database as sf object at a given city and year
 df <- read_map(
   city = "Sao Paulo",
-  year = 2017,
+  year = 1977,
   harmonize = FALSE,
   geometry = "zone"
 )
@@ -42,7 +43,7 @@ df <- read_map(
 #' # return district data from OD Surveys database as sf object at a given city and year
 df <- read_map(
   city = "Sao Paulo",
-  year = 2017,
+  year = 1977,
   harmonize = FALSE,
   geometry = "district"
 )
@@ -54,6 +55,6 @@ df <- read_map(
   harmonize = FALSE,
   geometry = "municipality"
 )
-
+\dontshow{\}) # examplesIf}
 }
 \concept{Geometry}

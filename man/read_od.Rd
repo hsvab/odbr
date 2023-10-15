@@ -25,14 +25,15 @@ the harmonized database (over the years, for the same city) or not - the
 default is the raw base.
 }
 \examples{
+\dontshow{if (identical(tolower(Sys.getenv("NOT_CRAN")), "true")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 library(odbr)
 
 # return data from OD Surveys database as data.frame
 df <- read_od(
   city = "Sao Paulo",
-  year = 2017,
+  year = 1977,
   harmonize = FALSE
 )
-
+\dontshow{\}) # examplesIf}
 }
 \concept{Microdata}
