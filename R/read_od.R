@@ -13,13 +13,13 @@
 #' @export
 #' @family Microdata
 #'
-#' @examples
+#' @examplesIf identical(tolower(Sys.getenv("NOT_CRAN")), "true")
 #' library(odbr)
 #'
 #' # return data from OD Surveys database as data.frame
 #' df <- read_od(
 #'   city = "Sao Paulo",
-#'   year = 2017,
+#'   year = 1977,
 #'   harmonize = FALSE
 #' )
 #'

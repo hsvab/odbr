@@ -15,7 +15,7 @@
 #' @export
 #' @family Documentation
 #'
-#' @examples
+#' @examplesIf identical(tolower(Sys.getenv("NOT_CRAN")), "true")
 #' library(odbr)
 #'
 #' # return data dictionary from OD Surveys, as data.frame, at a given city and year
