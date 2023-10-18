@@ -1,5 +1,5 @@
 # The "download_piggyback" function requires as parameter the filename_to_download
-download_piggyback <- function(filename_to_download) {
+download_piggyback <- function(filename_to_download, force_download = FALSE) {
   # Defining our temporary directory
   temp_dest_dir <- tempdir(check = TRUE)
 
@@ -9,7 +9,7 @@ download_piggyback <- function(filename_to_download) {
   # Creating path + filename and saving to "temporary_filename"
   temp_full_file_path <- paste0(temp_dest_dir, "/", filename_to_download)
 
-  if (!file.exists(temp_full_file_path)) {
+  if (!file.exists(temp_full_file_path) || force_download) {
     # Uploading the file to a release of the odbr repo - release specified in the parameter
     piggyback::pb_download(
       file = filename_to_download,
