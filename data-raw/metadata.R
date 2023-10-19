@@ -1,6 +1,6 @@
-## code to prepare `metadata` dataset goes here
+## Prepare `metadata` dataset
 
 metadata <- data.table::fread("data-raw/metadata.csv", sep = ",")
 
-# Making the metadata.csv available to users of the package as database
+# Making the metadata.csv file available
 usethis::use_data(metadata, overwrite = TRUE)

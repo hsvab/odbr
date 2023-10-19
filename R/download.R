@@ -1,4 +1,4 @@
-# The "download_piggyback" function requires as parameter the filename_to_download
+# Requiring as parameter the filename_to_download it returns the R object "temporary_filename"
 download_piggyback <- function(filename_to_download, force_download = FALSE) {
   # Defining our temporary directory
   temp_dest_dir <- tempdir(check = TRUE)
@@ -18,6 +18,6 @@ download_piggyback <- function(filename_to_download, force_download = FALSE) {
     )
   }
 
-  # The function returns the R object "temporary_filename"
+  # Uploading the file to a release of the odbr repo - release specified in the parameter
   return(temp_full_file_path)
 }

@@ -59,6 +59,6 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                  Check the metadata object for available dictionaries and cohorts.")
   }
 
-  # Delivering the requested file as a function return
+  # Delivering the requested file
   return(od_dic)
 }

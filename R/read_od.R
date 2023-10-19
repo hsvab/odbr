@@ -46,7 +46,7 @@ read_od <- function(city = "S\u00E3o Paulo",
   filename_to_download <- paste0(compose_name(city, year, harmonize), ".csv.gz")
 
   # Calling the "download_piggyback" function with "filename_to_download" as
-  # parameter and saving the function return in "temporary_filename"
+  # parameter and saving the return in "temporary_filename"
   temporary_filename <- download_piggyback(filename_to_download, force_download)
 
   # Reading the file to a release in odbr repository
