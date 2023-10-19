@@ -1,9 +1,11 @@
 #' Download microdata from OD Surveys databases
 #'
 #' @description
-#' The "read_od" function requires as parameter city, year and whether you want
-#' the harmonized database (over the years, for the same city) or not - the
-#' default is the raw base.
+#' `read_od()` download the data for a specific Origin Destination survey and
+#' return it as a dataframe. It uses the cached data file if it was previously
+#' downloaded to avoid extra networking consumption. To understand the returned
+#' dataframe format, please refeer to the `read_dictionary()` function for the
+#' same survey cohort.
 #'
 #' @template city
 #' @template year

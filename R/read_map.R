@@ -1,10 +1,15 @@
 #' Download spatial data from OD Surveys databases
 #'
 #' @description
-#' The "read_map" function requires as parameter city, year, geometry (zones or
-#' municipalities) - the default is zone, and whether you want the harmonized
-#' database (variable names and reference/geodesic projection over the years,
-#' for the same city) or not - the default is the raw base.
+#' `read_map()` download the geo data for a specific Origin Destination survey
+#' and return it as an sf dataframe. It uses the cached data file if it was
+#' previously downloaded to avoid extra networking consumption. To understand
+#' the returned dataframe format, please reefer to the `read_dictionary()`
+#' function for the same survey cohort.
+#'
+#' You should also specify the geometry granularity you want, be it "municipal",
+#' "district" or "zone" level of details. Of course not all geometry
+#' granularities are available for all surveys.
 #'
 #' @template city
 #' @template year

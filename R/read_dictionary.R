@@ -1,9 +1,11 @@
 #' Download data dictionary from OD surveys databases
 #'
 #' @description
-#' The "read_dictionary" function requires as parameter city, year and whether
-#' you want the harmonized database (over the years, for the same city) or not -
-#' the default is the raw base.
+#' `read_dictonary()` returns the data dictionary of a specific Origin
+#' Destination Survey, if available. This dictionary is intended to be used to
+#' understand the data downloaded using the `odbr::read_od` function. It will
+#' contain the list of variables and, for each variable, a simple description,
+#' the available categories and its class (factor, numeric, etc).
 #'
 #' @template city
 #' @template year
