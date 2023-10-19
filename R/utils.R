@@ -1,4 +1,4 @@
-# Function to compose the base name of map files -------------------------------
+# Compose the base name of map files -------------------------------
 compose_file_path <- function(city, year, harmonize) {
   city_text <- clean_string(city)
 
@@ -11,7 +11,7 @@ compose_file_path <- function(city, year, harmonize) {
   return(filepath)
 }
 
-# Function to compose the base name of data / dictionary / map files -----------
+# Compose the base name of data / dictionary / map files -----------
 compose_name <- function(city, year, harmonize, level = "od") {
   city_text <- clean_string(city)
 
@@ -26,7 +26,7 @@ compose_name <- function(city, year, harmonize, level = "od") {
   return(name)
 }
 
-# Function to convert sav to csv.gz file, and upload to repository -------------
+# Convert sav to csv.gz file, and upload to repository -------------
 upload_sav_db_to_repo <- function(city, year, harmonize, repository, tag) {
   base_filename <- paste0(
     compose_file_path(city, year, harmonize), "/",
@@ -56,12 +56,12 @@ upload_sav_db_to_repo <- function(city, year, harmonize, repository, tag) {
   )
 }
 
-# Function to remove non-ASCII characters -------------------------------------
+# Remove non-ASCII characters -------------------------------------
 clean_string <- function(text) {
   gsub("~", "", gsub(" ", "_", tolower(iconv(text, to = "ASCII//TRANSLIT"))))
 }
 
-# Dummy function just to make one explicit usage of R.utils (dependency) to
+# Dummy flag just to make one explicit usage of R.utils (dependency) to
 # please R CMD check test and avoid it complaining that R.utils is listed in the
 # Imports section of DESCRIPTION but it is not being used anywhere.
 # R.utils is a "cross dependency" from piggyback.

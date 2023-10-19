@@ -1,4 +1,4 @@
-# The "download_piggyback" function requires as parameter the filename_to_download
+# Requiring as parameter the filename_to_download it returns the R object "temporary_filename"
 download_piggyback <- function(filename_to_download) {
   # Defining a temporary file path and saving it in "temp"
   temp <- fs::file_temp()
@@ -15,6 +15,5 @@ download_piggyback <- function(filename_to_download) {
     repo = "hsvab/odbr",
     dest = temp
   )
-  # The function returns the R object "temporary_filename"
   return(temporary_filename)
 }
