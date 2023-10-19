@@ -8,6 +8,7 @@
 #' @template city
 #' @template year
 #' @template harmonize
+#' @template force_download
 #'
 #' @return A `"data.frame"` object.
 #' @export
@@ -25,7 +26,8 @@
 #'
 read_od <- function(city = "S\u00E3o Paulo",
                     year = 2017,
-                    harmonize = FALSE) {
+                    harmonize = FALSE,
+                    force_download = FALSE) {
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
@@ -45,7 +47,7 @@ read_od <- function(city = "S\u00E3o Paulo",
 
   # Calling the "download_piggyback" function with "filename_to_download" as
   # parameter and saving the return in "temporary_filename"
-  temporary_filename <- download_piggyback(filename_to_download)
+  temporary_filename <- download_piggyback(filename_to_download, force_download)
 
   # Reading the file to a release in odbr repository
   od_file <- data.table::fread(temporary_filename,

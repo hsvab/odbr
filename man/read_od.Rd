@@ -4,7 +4,12 @@
 \alias{read_od}
 \title{Download microdata from OD Surveys databases}
 \usage{
-read_od(city = "São Paulo", year = 2017, harmonize = FALSE)
+read_od(
+  city = "São Paulo",
+  year = 2017,
+  harmonize = FALSE,
+  force_download = FALSE
+)
 }
 \arguments{
 \item{city}{Character. City of reference. Defaults to "São Paulo".}
@@ -15,6 +20,9 @@ read_od(city = "São Paulo", year = 2017, harmonize = FALSE)
 \item{harmonize}{Logical. When \code{FALSE} (Default), the function returns the raw
 data. If \code{TRUE}, the function returns harmonized data to the same
 city, across all the years.}
+
+\item{force_download}{Boolean. If we should download the data file again even
+if it was already downloaded. Defaults to FALSE.}
 }
 \value{
 A \code{"data.frame"} object.
