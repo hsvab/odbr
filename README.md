@@ -102,10 +102,10 @@ Isoda](https://www.instagram.com/redes.urbanas/)
 
 If you want to cite this package, you can cite it as:
 
-- Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
-  Rafael H. M. (2023) odbr: Download Data from Brazil’s Origin
-  Destination Surveys. R package version v0.1.0,
-  <https://CRAN.R-project.org/package=odbr>.
+-   Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
+    Rafael H. M. (2023) odbr: Download Data from Brazil’s Origin
+    Destination Surveys. R package version v0.1.0,
+    <https://CRAN.R-project.org/package=odbr>.
 
 <!-- -->
 

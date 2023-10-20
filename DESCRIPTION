@@ -1,5 +1,5 @@
 Package: odbr
-Title: Download Data from Brazil's Origin Destination Surveys
+Title: Data from Brazil's Origin Destination Surveys
 Version: 0.1.0
 Authors@R: c(
     person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
@@ -9,11 +9,20 @@ Authors@R: c(
     person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0003-2125-7465"))
   )
-Description: Download Data from Brazil's Origin Destination Surveys.
+Description: Provide helper functions to download Data from Brazil's Origin
+  Destination Surveys both the survey data and its maps, and also the surveys
+  data dictionaries that explains each variable. Initially only the non-harmonized
+  data will be available, but it is already planned to also have an "harmonized"
+  version of each survey contemplating a single standardized format for (almost)
+  all surveys.
+  The three main functions are:
+  - `read_dictionary`: Retrieve the data dictionary
+  - `read_od`: Retrieve the survey data
+  - `read_map`: Retrieve geolocalized survey data
 License: GPL (>=3)
-Depends: 
+Depends:
     R (>= 2.10)
-Imports: 
+Imports:
     data.table,
     fs,
     haven,
@@ -21,12 +30,12 @@ Imports:
     R.utils,
     sf,
     usethis
-Suggests: 
+Suggests:
     knitr,
     rmarkdown,
     spelling,
     testthat (>= 3.2.0)
-VignetteBuilder: 
+VignetteBuilder:
     knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
