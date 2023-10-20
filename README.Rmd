@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit only the Rmd file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 # odbr: Download Data from Brazil's Origin Destination Surveys <img align="right" src="man/figures/ODBRlogov4hexagonal.png" alt="logo" width="180">
 
 <!-- badges: start -->
+<!-- uncomment after the package is released at CRAN
+[![CRAN
+   status](https://www.r-pkg.org/badges/version/censobr)](https://CRAN.R-project.org/package=censobr)
+[![CRAN/METACRAN Total
+   downloads](http://cranlogs.r-pkg.org/badges/grand-total/censobr?color=blue)](https://CRAN.R-project.org/package=censobr) [![Codecov test
+-->
 [![Codecov test
 coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/hsvab/odbr?branch=main)
 [![R-CMD-check](https://github.com/hsvab/odbr/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/hsvab/odbr/actions?query=branch%3Amain)
@@ -23,13 +29,16 @@ coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https:/
 
 <!-- badges: end -->
 
-**odbr** is an R package to download data from Brazil's Origin Destination Surveys. The package provides databases, maps, and data dictionaries in English, Portuguese, and Spanish. Furthermore, it is possible to download harmonized data across different cohorts for the same city.
+**odbr** is an R package to download data from Brazil's Origin Destination
+Surveys. The package provides databases, maps, and data dictionaries in English,
+Portuguese, and Spanish. Furthermore, it is possible to download harmonized data
+across different cohorts for the same city.
 
 
 ## Installation
 
-You can install the development version of odbr from
-[CRAN](https://CRAN.R-project.org/package=odbr) with:
+You can install the [odbr Package](https://CRAN.R-project.org/package=odbr)
+with:
 
 ``` r
 # install from CRAN
@@ -37,7 +46,8 @@ install.packages("odbr")
 library(odbr)
 ```
 
-You can install the development version of odbr from [GitHub](https://github.com/) with:
+You can install the development version of odbr from
+[GitHub](https://github.com/hsvab/odbr) with:
 
 ``` r
 # or use the development version with latest features
@@ -48,28 +58,29 @@ library(odbr)
 
 ## Basic Usage
 
-The syntax of all `odbr` functions operate on the same logic so it becomes intuitive to download any data set using a single line of code. Like this:
+The syntax of all `odbr` functions operate on the same logic so it becomes
+intuitive to download any dataset using a single line of code. Like this:
 
 ```{r example}
-library(odbr)
-
 # Return data from OD Surveys database as data.frame
-df <- read_od(
+df <- odbr::read_od(
   city = "Sao Paulo",
   year = 2017,
   harmonize = FALSE
 )
 
-# Return zone data from OD Surveys database as sf object at a given city and year
-df <- read_map(
+# Return zone data from OD Surveys database as an sf object at a given city and
+# year
+df <- odbr::read_map(
   city = "Sao Paulo",
   year = 2017,
   harmonize = FALSE,
   geometry = "zone"
 )
 
-# Return data dictionary from OD Surveys, as data.frame, at a given city and year
-df <- read_dictionary(
+# Return data dictionary from OD Surveys, as an data.frame, at a given city and
+# year
+df <- odbr::read_dictionary(
   city = "Sao Paulo",
   year = 2017,
   harmonize = FALSE,
@@ -81,27 +92,27 @@ df <- read_dictionary(
 
 **The original geodetic reference system remained unchanged.**
 
-|City|Years available| Harmonized |Dictionary languages | Source|
-|-----|-----|-----|-----|-----|
-|São Paulo| 1977, 1987, 1997, 2007, 2017 | No | en, es, pt-br | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino)
-
+| City | Years available | Dictionary languages | Source |
+|-----|-----|-----|-----|
+| São Paulo | 1977, 1987, 1997, 2007, 2017 | en, es, pt-br | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino)
 
 
 ## Available harmonized datasets:
 
 **All harmonized datasets use geodetic reference system "SIRGAS2000", CRS(4674).**
 
-There is not harmonized data available yet.
-
+There is no harmonized data available yet.
 
 
 ## Contributing to odbr
-If you would like to contribute to **odbr**, you're welcome to open an issue to explain the proposed a contribution.
+If you would like to contribute to **odbr**, you're welcome to open an issue to
+explain the proposed a contribution.
 
 
 ## Credits
 
-Original databases and shapefiles are created by local official government institutions.
+Original databases and shapefiles are created by local official government
+institutions.
 
 The logo was designed by [Marcos Kyoto de Tani e Isoda](https://www.instagram.com/redes.urbanas/)
 
@@ -124,4 +135,7 @@ bibentry(
 
 ## Sponsors <a href="https://ropensci.org/"><img align="right" src="man/figures/ropenscilogo.png" alt="ropensci logo" width="150" /></a>
 
-The **odbr** package was initially sponsored by rOpenSci through its Champions Program (2022 edition) whose main goal is to provide support to R developers from around the world who identify themselves as members of groups that are systematically excluded from the open-source software community.
+The **odbr** package was initially sponsored by rOpenSci through its Champions
+Program (2022 edition) whose main goal is to provide support to R developers
+from around the world who identify themselves as members of groups that are
+systematically excluded from the open-source software community.
