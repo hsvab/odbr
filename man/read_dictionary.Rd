@@ -28,9 +28,11 @@ Options include \code{c("pt", "en", "es")}.}
 A \code{"data.frame"} object.
 }
 \description{
-The "read_dictionary" function requires as parameter city, year and whether
-you want the harmonized database (over the years, for the same city) or not -
-the default is the raw base.
+Return the data dictionary of a specific Origin
+Destination Survey, if available. This dictionary is intended to be used to
+understand the data downloaded using the \code{odbr::read_od} function. It will
+contain the list of variables and, for each variable, a simple description,
+the available categories and its class (factor, numeric, etc).
 }
 \examples{
 \dontshow{if (identical(tolower(Sys.getenv("NOT_CRAN")), "true")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}

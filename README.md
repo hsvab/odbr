@@ -21,8 +21,8 @@ same city.
 
 ## Installation
 
-You can install the development version of odbr from
-[CRAN](https://CRAN.R-project.org/package=odbr) with:
+You can install the [odbr
+Package](https://CRAN.R-project.org/package=odbr) with:
 
 ``` r
 # install from CRAN
@@ -46,9 +46,9 @@ becomes intuitive to download any data set using a single line of code.
 Like this:
 
 ``` r
+# Return data from OD Surveys database as data.frame
 library(odbr)
 
-# Return data from OD Surveys database as data.frame
 df <- read_od(
   city = "Sao Paulo",
   year = 2017,
@@ -72,7 +72,7 @@ df <- read_dictionary(
 )
 ```
 
-## Available non-harmonized datasets:
+## Available datasets:
 
 **The original geodetic reference system remained unchanged.**
 
@@ -80,12 +80,10 @@ df <- read_dictionary(
 |-----------|------------------------------|------------|----------------------|------------------------------------------------------------------------------------|
 | São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | en, es, pt-br        | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino) |
 
-## Available harmonized datasets:
+**There is no harmonized data available yet.**
 
-**All harmonized datasets use geodetic reference system “SIRGAS2000”,
-CRS(4674).**
-
-There is not harmonized data available yet.
+*All harmonized datasets use geodetic reference system “SIRGAS2000”,
+CRS(4674).*
 
 ## Contributing to odbr
 
@@ -103,9 +101,10 @@ Isoda](https://www.instagram.com/redes.urbanas/)
 If you want to cite this package, you can cite it as:
 
 - Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
-  Rafael H. M. (2023) odbr: Download Data from Brazil’s Origin
-  Destination Surveys. R package version v0.1.0,
-  <https://CRAN.R-project.org/package=odbr>.
+  Rafael H. M.
+
+2023) odbr: Download Data from Brazil’s Origin Destination Surveys. R
+      package version v0.1.0, <https://CRAN.R-project.org/package=odbr>.
 
 <!-- -->
 

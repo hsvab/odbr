@@ -32,10 +32,14 @@ if it was already downloaded. Defaults to FALSE.}
 An \verb{"sf" "data.frame"} object
 }
 \description{
-The "read_map" function requires as parameter city, year, geometry (zones or
-municipalities) - the default is zone, and whether you want the harmonized
-database (variable names and reference/geodesic projection over the years,
-for the same city) or not - the default is the raw base.
+\code{read_map()} download the geodetic data for a specific Origin Destination survey
+and return it as an sf dataframe. It uses the cached data file if it was
+previously downloaded to avoid extra networking consumption. To understand
+the returned dataframe format, please reefer to the \code{read_dictionary()}
+function for the same survey cohort.
+It is also necessary to specify the geometry granularity wanted, be it
+"municipality", "district" or "zone" level of details. Of course, not all
+geometries are available for all surveys.
 }
 \examples{
 \dontshow{if (identical(tolower(Sys.getenv("NOT_CRAN")), "true")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
