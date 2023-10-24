@@ -9,7 +9,7 @@ Authors@R: c(
     person("Rafael H. M.", "Pereira", , "rafa.pereira.br@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0003-2125-7465"))
   )
-Description: Provide helpful functions to download Data from Brazil's Origin Destination Surveys both the survey data and its maps, and also the surveys data dictionaries that explains each variable. Initially only the non-harmonized data will be available, but it is already planned to also have an "harmonized" version of each survey contemplating a single standardized format for (almost) all surveys.
+Description: Download data from Brazil's Origin Destination Surveys. The package covers both data from household travel surveys, dictionaries of variables, and the spatial geometries of surveys conducted in different years and across various urban areas in Brazil. For some cities, the package will include enhanced versions of the data sets with variables "harmonized" across different years.
 License: GPL (>=3)
 Depends:
     R (>= 2.10)
