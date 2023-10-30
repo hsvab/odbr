@@ -82,9 +82,17 @@ read_map <- function(city = "S\u00E3o Paulo",
   # parameter and saving the function return in "temporary_filename"
   temporary_filename <- download_piggyback(filename_to_download, force_download)
 
-  # Reading shape files
-  od_map <- sf::read_sf(temporary_filename)
 
-  # Delivering the requested file as a function return
-  return(od_map)
+  if (is.null(temporary_filename)) {
+    return(message("File was not downloaded. Check your internet connection."))
+  } else if (file.exists(temporary_filename)) {
+    # Reading the file to a release in odbr repository
+    od_map <- sf::read_sf(temporary_filename)
+
+    # Delivering the requested file as a function return
+    return(od_map)
+  } else {
+    return(message("File was not downloaded. Check your internet connection."))
+  }
+
 }
