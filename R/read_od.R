@@ -51,11 +51,21 @@ read_od <- function(city = "S\u00E3o Paulo",
   # parameter and saving the return in "temporary_filename"
   temporary_filename <- download_piggyback(filename_to_download, force_download)
 
-  # Reading the file to a release in odbr repository
-  od_file <- data.table::fread(temporary_filename,
-    sep = ";"
-  )
 
-  # Delivering the requested file as a function return
-  return(od_file)
+
+  if (is.null(temporary_filename)) {
+    return(message("File was not downloaded. Check your internet connection."))
+  } else if (file.exists(temporary_filename)) {
+    # Reading the file to a release in odbr repository
+    od_file <- data.table::fread(temporary_filename,
+                                 sep = ";")
+
+    # Delivering the requested file as a function return
+    return(od_file)
+  } else {
+    return(message("File was not downloaded. Check your internet connection."))
+  }
+
+
+
 }

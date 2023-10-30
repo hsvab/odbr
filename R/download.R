@@ -9,8 +9,20 @@ download_piggyback <- function(filename_to_download, force_download = FALSE) {
   # Creating path + filename and saving to "temporary_filename"
   temp_full_file_path <- paste0(temp_dest_dir, "/", filename_to_download)
 
-  if (!file.exists(temp_full_file_path) || force_download) {
-    # Uploading the file to a release of the odbr repo - release specified in the parameter
+  connected_to_the_internet <- curl::has_internet()
+
+  # If its not connected to the internet,
+  # return message.
+  if(isFALSE(connected_to_the_internet) & !file.exists(temp_full_file_path)){
+    temp_full_file_path <- ""
+    return(message("There is no internet connection."))
+  } else if(isFALSE(connected_to_the_internet) & force_download){
+    temp_full_file_path <- ""
+    return(message("There is no internet connection."))
+  } else if(isFALSE(force_download) & file.exists(temp_full_file_path)){
+    return(temp_full_file_path)
+  } else if (isTRUE(connected_to_the_internet) & !file.exists(temp_full_file_path) || force_download) {
+    # Downloading the file to a release of the odbr repo - release specified in the parameter
     piggyback::pb_download(
       file = filename_to_download,
       repo = "hsvab/odbr",
@@ -18,6 +30,6 @@ download_piggyback <- function(filename_to_download, force_download = FALSE) {
     )
   }
 
-  # Uploading the file to a release of the odbr repo - release specified in the parameter
+  # return path of the downloaded file
   return(temp_full_file_path)
 }
