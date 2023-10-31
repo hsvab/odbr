@@ -14,7 +14,6 @@
 #' @template harmonize
 #' @param geometry Character. The type of spatial data to be opened. Options
 #' include `c("zone","district", "municipality")`.
-#' @template force_download
 #'
 #' @return An `"sf" "data.frame"` object
 #' @export
@@ -50,8 +49,7 @@
 read_map <- function(city = "S\u00E3o Paulo",
                      year = 2017,
                      harmonize = FALSE,
-                     geometry = "zone",
-                     force_download = FALSE) {
+                     geometry = "zone") {
   # Clean the name of the city before comparing to the metadata
   city_clean <- clean_string(city)
 
@@ -80,7 +78,7 @@ read_map <- function(city = "S\u00E3o Paulo",
 
   # Calling the "download_piggyback" function with "filename_to_download" as
   # parameter and saving the function return in "temporary_filename"
-  temporary_filename <- download_piggyback(filename_to_download, force_download)
+  temporary_filename <- download_piggyback(filename_to_download)
 
   # check if download worked
   if (is.null(temporary_filename)) {

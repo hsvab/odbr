@@ -4,13 +4,7 @@
 \alias{read_map}
 \title{Download spatial data from OD Surveys databases}
 \usage{
-read_map(
-  city = "São Paulo",
-  year = 2017,
-  harmonize = FALSE,
-  geometry = "zone",
-  force_download = FALSE
-)
+read_map(city = "São Paulo", year = 2017, harmonize = FALSE, geometry = "zone")
 }
 \arguments{
 \item{city}{Character. City of reference. Defaults to "São Paulo".}
@@ -24,9 +18,6 @@ city, across all the years.}
 
 \item{geometry}{Character. The type of spatial data to be opened. Options
 include \code{c("zone","district", "municipality")}.}
-
-\item{force_download}{Boolean. If we should download the data file again even
-if it was already downloaded. Defaults to FALSE.}
 }
 \value{
 An \verb{"sf" "data.frame"} object
