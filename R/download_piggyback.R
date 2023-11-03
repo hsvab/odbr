@@ -21,14 +21,25 @@ download_piggyback <- function(filename_to_download,
   temp_full_file_path <- paste0(temp_dest_dir, "/", filename_to_download)
 
   if (!file.exists(temp_full_file_path) || force_download) {
+
     # downloading the file from a release of the odbr repo - release specified in the parameter
-    piggyback::pb_download(
-      file = filename_to_download,
-      repo = "hsvab/odbr",
-      dest = temp_dest_dir
+    try(silent = TRUE,
+        piggyback::pb_download(
+        file = filename_to_download,
+        repo = "hsvab/odbr",
+        dest = temp_dest_dir
+      )
     )
   }
 
+  # Halt function if download failed
+  if (!file.exists(temp_full_file_path) ) {
+    message('Internet connection not working properly.')
+    return(invisible(NULL))
+
+  } else {
   # return string with the path to the file saved in a tempdir
-  return(temp_full_file_path)
+    return(temp_full_file_path)
+  }
+
 }
