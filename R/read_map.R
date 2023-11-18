@@ -83,7 +83,9 @@ read_map <- function(city = "S\u00E3o Paulo",
   temporary_filename <- download_piggyback(filename_to_download, force_download)
 
   # check if download worked
-  if(is.null(temporary_filename)) { return(NULL) }
+  if (is.null(temporary_filename)) {
+    return(NULL)
+  }
 
   # Reading shape files
   od_map <- sf::read_sf(temporary_filename)
