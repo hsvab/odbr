@@ -4,14 +4,10 @@
 \alias{download_piggyback}
 \title{Download file from odbr using piggyback}
 \usage{
-download_piggyback(filename_to_download, force_download = FALSE)
+download_piggyback(filename_to_download)
 }
 \arguments{
 \item{filename_to_download}{String. The name of the file to be downloaded.}
-
-\item{force_download}{Logical. If \code{FALSE} (default) the function will read
-cached data downloaded previously in the same session. If \code{TRUE}, the
-function will download the data and overwrite cached data.}
 }
 \value{
 A string with the path to the file saved in a tempdir
