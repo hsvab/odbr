@@ -59,7 +59,7 @@ The package currently includes 2 main functions to download census data:
 
 **odbr** also includes a support function to help users navigate databases,
 providing convenient information on data variables through data dictionaries in
-3 languages (English - en, Portuguese from Brazil - pt and Spanish - es):
+3 languages (English - en, Portuguese from Brazil - pt, and Spanish - es):
 
 3. `read_dicitionary()`
 
