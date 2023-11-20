@@ -55,6 +55,10 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   # Get the correct dictionary
   od_dic <- get0(od_dic_name, envir = asNamespace("odbr"))
 
+  # Second try to get the dictionary, using ::
+  if (is.null(od_dic)) {
+    od_dic <- eval(parse(text = paste0("odbr::", od_dic_name)))
+  }
   # Verify is loaded as a data.frame object
   if (is.data.frame(od_dic) == FALSE) {
     usethis::ui_stop("The specified dictionary is not available.
