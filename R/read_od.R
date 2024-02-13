@@ -35,11 +35,13 @@ read_od <- function(city = "S\u00E3o Paulo",
   if (nrow(odbr::metadata[clean_string(odbr::metadata$city) == city_clean &
                             odbr::metadata$year == year &
                             odbr::metadata$harmonized == harmonize, ]) == 0) {
-    usethis::ui_stop("There is no data for:
-                        - city: {city}
-                        - year: {year}
-                        - harmonized: {harmonize}
-                     Check the metadata object for available data.")
+    cli::cli_abort(c(
+      "There is no data for:",
+      " " = " - city: {city}",
+      " " = " - year: {year}",
+      " " = " - harmonized: {harmonize}",
+      "i" = "Check the metadata object for available data."
+    ))
   }
 
   # Creating the filename to download

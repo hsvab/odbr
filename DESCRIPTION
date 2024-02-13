@@ -14,13 +14,13 @@ License: GPL (>=3)
 Depends:
     R (>= 2.10)
 Imports:
+    cli,
     data.table,
     fs,
     haven,
     piggyback,
     R.utils,
-    sf,
-    usethis
+    sf
 Suggests:
     knitr,
     rmarkdown,
