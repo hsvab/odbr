@@ -5,10 +5,10 @@
     Condition
       Error in `read_dictionary()`:
       ! There is no dictionary for:
-      - city: Manaus
-      - year: 1977
-      - harmonized: FALSE
-      - language: pt
+        - city: Manaus
+        - year: 1977
+        - harmonized: FALSE
+        - language: pt
       i Check the metadata object for available data.
 
 ---
@@ -18,10 +18,10 @@
     Condition
       Error in `read_dictionary()`:
       ! There is no dictionary for:
-      - city: São Paulo
-      - year: 1978
-      - harmonized: FALSE
-      - language: pt
+        - city: São Paulo
+        - year: 1978
+        - harmonized: FALSE
+        - language: pt
       i Check the metadata object for available data.
 
 ---
@@ -31,9 +31,9 @@
     Condition
       Error in `read_dictionary()`:
       ! There is no dictionary for:
-      - city: São Paulo
-      - year: 1977
-      - harmonized: TRUE
-      - language: pt
+        - city: São Paulo
+        - year: 1977
+        - harmonized: TRUE
+        - language: pt
       i Check the metadata object for available data.
 

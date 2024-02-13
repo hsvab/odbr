@@ -20,7 +20,7 @@ Imports:
     haven,
     piggyback,
     R.utils,
-    sf,
+    sf
 Suggests:
     knitr,
     rmarkdown,
