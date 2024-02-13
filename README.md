@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/ODBRlogov4hexagonal.png" alt="logo" width="180">
+# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/logo.png" alt="logo" width="180">
 
 <!-- badges: start -->
 
