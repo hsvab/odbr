@@ -41,12 +41,12 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                             odbr::metadata$harmonized == harmonize &
                             odbr::metadata$language == language, ]) == 0) {
     cli::cli_abort(c(
-    "There is no dictionary for:",
-    " " = " - city: {city}",
-    " " = " - year: {year}",
-    " " = " - harmonized: {harmonize}",
-    " " = " - language: {language}",
-    "i" = "Check the metadata object for available data."
+      "There is no dictionary for:",
+      " " = " - city: {city}",
+      " " = " - year: {year}",
+      " " = " - harmonized: {harmonize}",
+      " " = " - language: {language}",
+      "i" = "Check the metadata object for available data."
     ))
   }
 
