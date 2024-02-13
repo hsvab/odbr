@@ -64,8 +64,8 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
   # Verify is loaded as a data.frame object
   if (!is.data.frame(od_dic)) {
     cli::cli_abort(c(
-    "The specified dictionary is not available.",
-    "i" = "Check the metadata object for available dictionaries and cohorts."
+      "The specified dictionary is not available.",
+      "i" = "Check the metadata object for available dictionaries and cohorts."
     ))
   }
 

@@ -58,12 +58,12 @@ read_map <- function(city = "S\u00E3o Paulo",
                             odbr::metadata$year == year &
                             odbr::metadata$harmonized == harmonize, ]) == 0) {
     cli::cli_abort(c(
-    "There is no geometry data for:",
-    " " = " - city: {city}",
-    " " = " - year: {year}",
-    " " = " - harmonized: {harmonize}",
-    " " = " - geometry: {geometry}",
-    "i" = "Check the metadata object for available data."
+      "There is no geometry data for:",
+      " " = " - city: {city}",
+      " " = " - year: {year}",
+      " " = " - harmonized: {harmonize}",
+      " " = " - geometry: {geometry}",
+      "i" = "Check the metadata object for available data."
     ))
   }
 
