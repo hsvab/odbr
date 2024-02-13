@@ -29,7 +29,7 @@ build_wordlist()
 devtools::build_manual()
 devtools::build_readme()
 devtools::build_vignettes()
-devtools::build_site()
+# devtools::build_site() # deployed via gh pages
 devtools::lint()
 lintr::lint_package()
 devtools::build()
