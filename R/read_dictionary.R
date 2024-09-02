@@ -40,12 +40,14 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
                             odbr::metadata$year == year &
                             odbr::metadata$harmonized == harmonize &
                             odbr::metadata$language == language, ]) == 0) {
-    usethis::ui_stop("There is no dictionary for:
-                          - city: {city}
-                          - year: {year}
-                          - harmonized: {harmonize}
-                          - language: {language}
-                                           Check the metadata object for available data.")
+    cli::cli_abort(c(
+      "There is no dictionary for:",
+      " " = " - city: {city}",
+      " " = " - year: {year}",
+      " " = " - harmonized: {harmonize}",
+      " " = " - language: {language}",
+      "i" = "Check the metadata object for available data."
+    ))
   }
 
   # Creating the dictionary filename
@@ -60,9 +62,11 @@ read_dictionary <- function(city = "S\u00E3o Paulo",
     od_dic <- eval(parse(text = paste0("odbr::", od_dic_name)))
   }
   # Verify is loaded as a data.frame object
-  if (is.data.frame(od_dic) == FALSE) {
-    usethis::ui_stop("The specified dictionary is not available.
-                 Check the metadata object for available dictionaries and cohorts.")
+  if (!is.data.frame(od_dic)) {
+    cli::cli_abort(c(
+      "The specified dictionary is not available.",
+      "i" = "Check the metadata object for available dictionaries and cohorts."
+    ))
   }
 
   # Delivering the requested file
