@@ -26,11 +26,11 @@ build_wordlist <- function() {
 # TODO: List down here all the commands we need to run while releasing a new
 # version of the package, including all tests, documentation building, etc.
 build_wordlist()
+lintr::lint_package()
 devtools::build_manual()
 devtools::build_readme()
 devtools::build_vignettes()
 # Site is deployed via gh pages no need for build_site
 devtools::lint()
-lintr::lint_package()
 devtools::build()
 devtools::check()
