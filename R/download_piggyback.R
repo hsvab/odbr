@@ -14,10 +14,10 @@ download_piggyback <- function(filename_to_download) {
 
   # Creating path + filename and saving to "temporary_filename"
   temp_full_file_path <- paste0(temp_dest_dir, "/", filename_to_download)
-  
+
   # Print the temp_full_file_path to the console
   message("Downloading file to: ", temp_full_file_path)
-  
+
   # downloading the file from a release of the odbr repo - release specified in
   # the parameter
   try(
@@ -35,7 +35,6 @@ download_piggyback <- function(filename_to_download) {
     #use the gh_rate_limits() function to check the rate limits for the type "core"
     gh::gh_rate_limits("core")
 
-    
     message("Internet connection not working properly.")
     return(invisible(NULL))
   } else {
