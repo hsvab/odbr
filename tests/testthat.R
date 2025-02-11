@@ -10,3 +10,6 @@ library(testthat)
 library(odbr)
 
 test_check("odbr")
+
+# CRAN OMP THREAD LIMIT to avoid CRAN NOTE
+Sys.setenv(OMP_THREAD_LIMIT = 2)
