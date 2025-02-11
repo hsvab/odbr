@@ -39,6 +39,20 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
 
+      - name: Install spatial dependencies [Linux]
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev
+
+      - name: Install spatial dependencies [macOS]
+        if: runner.os == 'macOS'
+        run: |
+          brew install pkg-config
+          brew install gdal
+          brew install proj
+          brew install geos
+
       - name: Install pak and query dependencies
         run: |
           install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
@@ -57,8 +71,8 @@ jobs:
       - name: Install system dependencies (Linux)
         if: runner.os == 'Linux'
         run: |
-          pak::local_system_requirements(execute = TRUE)
-          pak::pkg_system_requirements("rcmdcheck", execute = TRUE)
+          pak::pkg_sysreqs("local::.", dependencies = TRUE)$install_script
+          pak::pkg_sysreqs("rcmdcheck")$install_scripts
         shell: Rscript {0}
 
       - name: Install system dependencies (MacOS)

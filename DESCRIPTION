@@ -17,6 +17,7 @@ Imports:
     cli,
     data.table,
     fs,
+    gh,
     haven,
     piggyback,
     R.utils,
