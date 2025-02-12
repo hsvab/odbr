@@ -15,6 +15,9 @@ knitr::opts_chunk$set(
   comment = "#>",
   eval = identical(tolower(Sys.getenv("NOT_CRAN")), "true")
 )
+
+# CRAN OMP THREAD LIMIT to avoid CRAN NOTE
+Sys.setenv(OMP_THREAD_LIMIT = 2)
 ```
 
 **odbr** provides helpful functions to download Data from Brazil's Origin 
