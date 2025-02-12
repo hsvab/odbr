@@ -8,7 +8,7 @@ compose_file_path <- function(city, year, harmonize) {
   }
   filepath <- paste0("data-raw/", city_text, "/", year, "/", harmonized_text)
 
-  return(filepath)
+  filepath
 }
 
 # Compose the base name of data / dictionary / map files -----------

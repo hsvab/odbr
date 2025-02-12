@@ -33,9 +33,9 @@ download_piggyback <- function(filename_to_download) {
   # Halt function if download failed
   if (!file.exists(temp_full_file_path)) {
     message("Internet connection not working properly.")
-    return(invisible(NULL))
+    invisible(NULL)
   } else {
     # return string with the path to the file saved in a tempdir
-    return(temp_full_file_path)
+    temp_full_file_path
   }
 }
