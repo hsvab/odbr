@@ -33,7 +33,7 @@ download_piggyback <- function(filename_to_download) {
     )
   }, error = function(e) {
     message("Error during download: ", e$message)
-    return(invisible(NULL))
+    invisible(NULL)
   })
 
   # Check if the file was downloaded successfully
@@ -45,6 +45,6 @@ download_piggyback <- function(filename_to_download) {
     invisible(NULL)
   } else {
     # return string with the path to the file saved in a tempdir
-    return(temp_full_file_path)
+    temp_full_file_path
   }
 }
