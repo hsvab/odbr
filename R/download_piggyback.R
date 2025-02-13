@@ -20,19 +20,23 @@ download_piggyback <- function(filename_to_download) {
 
   # downloading the file from a release of the odbr repo - release specified in
   # the parameter
-  try(
-    silent = TRUE,
-    piggyback::pb_download(
-      file = filename_to_download,
-      repo = "hsvab/odbr",
-      dest = temp_dest_dir,
-      .token = ""
-    )
+  tryCatch(
+    {
+      piggyback::pb_download(
+        file = filename_to_download,
+        repo = "hsvab/odbr",
+        dest = temp_dest_dir
+      )
+    },
+    error = function(e) {
+      message("Error during download: ", e$message)
+      invisible(NULL)
+    }
   )
 
   # Halt function if download failed
   if (!file.exists(temp_full_file_path)) {
-    message("Internet connection not working properly.")
+    message("Download failed or internet connection not working properly.")
     invisible(NULL)
   } else {
     # return string with the path to the file saved in a tempdir

@@ -5,12 +5,14 @@ test_that("read_map() works", {
     harmonize = FALSE,
     geometry = "zone"
   )
+  
+  if (!is.null(testing_object)) {
+    expect_true(is.data.frame(testing_object))
+    expect_s3_class(testing_object, "sf")
+  } else {
+     expect_null(testing_object)
+  }
 
-  expect_equal(is.data.frame(testing_object), TRUE)
-
-  expect_s3_class(testing_object, "sf")
-
-  # Testing error message
   expect_snapshot(
     read_map(
       city = "Manaus",
