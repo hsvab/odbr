@@ -1,6 +1,6 @@
 Package: odbr
 Title: Download Data from Brazil's Origin Destination Surveys
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Haydee", "Svab", , "hsvab@hsvab.eng.br", role = c("aut", "cre")),
     person("Beatriz", "Milz", , "milz.bea@gmail.com", role = "aut",
