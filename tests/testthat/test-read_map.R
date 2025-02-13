@@ -5,12 +5,11 @@ test_that("read_map() works", {
     harmonize = FALSE,
     geometry = "zone"
   )
-  
   if (!is.null(testing_object)) {
     expect_true(is.data.frame(testing_object))
     expect_s3_class(testing_object, "sf")
   } else {
-     expect_null(testing_object)
+    expect_null(testing_object)
   }
 
   expect_snapshot(
