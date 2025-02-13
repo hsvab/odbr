@@ -6,9 +6,14 @@ test_that("read_map() works", {
     geometry = "zone"
   )
 
-  expect_equal(is.data.frame(testing_object), TRUE)
-
-  expect_s3_class(testing_object, "sf")
+  # Let's take into consideration the case in which we have reached
+  # the github API rate limit and then we will have a null result.
+  if (is.null(testing_object)) {
+    expect_null(testing_object)
+  } else {
+    expect_equal(is.data.frame(testing_object), TRUE)
+    expect_s3_class(testing_object, "sf")
+  }
 
   # Testing error message
   expect_snapshot(

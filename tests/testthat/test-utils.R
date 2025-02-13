@@ -22,10 +22,7 @@ test_that("compose_name", {
   )
 })
 
-
-
 # TODO: Test upload_sav_db_to_repo function
-
 
 test_that("clean_string", {
   expect_equal(
