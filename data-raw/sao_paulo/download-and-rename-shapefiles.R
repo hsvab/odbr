@@ -15,7 +15,14 @@ dir.create(directory)
 
 destfile_path <- paste0(directory, "pesquisa_od.zip")
 
-download.file(url = "https://transparencia.metrosp.com.br/sites/default/files/Site_190225_PesquisaOD2023.zip", destfile = destfile_path)
+
+zip_file <- paste0(
+  "https://transparencia.metrosp.com.br/sites/",
+  "default/files/Site_190225_PesquisaOD2023.zip"
+)
+
+
+download.file(url = zip_file, destfile = destfile_path)
 
 # Unzip the file -----------
 
@@ -53,7 +60,6 @@ rename_files <- function(name) {
   new_name <- paste0(level, year, "_region.", file_extension)
   new_path <- stringr::str_replace(name, file_name, new_name)
   fs::file_move(name, new_path)
-
 }
 
 possibly_rename_files <- purrr::possibly(rename_files, otherwise = NULL)
